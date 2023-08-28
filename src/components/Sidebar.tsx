@@ -2,7 +2,7 @@ import Image from "next/image";
 import { AiFillLinkedin, AiFillGithub, AiFillFilePdf } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
 import { GoLocation } from "react-icons/go";
-import Profile_Picture from "../public/profile_picture.webp";
+import Profile_Picture from "../../public/profile_picture.webp";
 import SocialMedia from "./SocialMedia";
 
 const Sidebar = () => {
