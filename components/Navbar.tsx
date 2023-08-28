@@ -5,7 +5,9 @@ import NavbarItem from "./NavbarItem";
 const navItems = [
   { name: "About", route: "/" },
   { name: "Resume", route: "/resume" },
-  { name: "Projects", route: "/projects" },
+  { name: "Portfolio", route: "/projects" },
+  { name: "Contact", route: "/contact" },
+  { name: "Feedback", route: "/feedback" },
 ];
 
 const Navbar = () => {

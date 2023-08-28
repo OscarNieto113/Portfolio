@@ -1,5 +1,6 @@
 const Resume = () => {
-  return <div>hello from resume</div>;
+  return 
+    <div>Resume</div>;
 };
 
 export default Resume;

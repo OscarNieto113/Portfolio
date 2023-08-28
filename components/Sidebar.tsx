@@ -64,15 +64,6 @@ const Sidebar = () => {
         <p className="my-2"> +52 (462) 148 6009 </p>
       </div>
       <button
-        className="w-8/12 px-5 py-2 text-white rounded-full cursor-pointer hover:scale-105 focus:outline-none bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r"
-        onClick={() =>
-          (window.location.href = "mailto:onietoespitia2@gmail.com")
-        }
-        aria-label="Email me"
-      >
-        Email me
-      </button>
-      <button
         onClick={() => {}}
         className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r"
       >
