@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+   font-family: Dina;
+   src: url("/fonts/Dina.ttc") format("opentype");
+}
+
 body {
    font-family: sans-serif;
    color: #354358;
 }
+

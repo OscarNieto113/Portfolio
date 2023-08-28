@@ -13,10 +13,11 @@ const Sidebar = () => {
         alt="Profile Picture"
         className="w-32 h-32 mx-auto rounded-full"
       />
-      <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
-        <span className="text-green ">Oscar</span> Nieto Espitia
-      </h3>
-      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full"> Web Developer</p>
+      <h2 className="my-4 text-3xl font-medium tracking-wider font-dina">
+        <strong>
+          <span>Oscar</span> Nieto Espitia{" "}
+        </strong>
+      </h2>
 
       {/*Resume */}
       <a
