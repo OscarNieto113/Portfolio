@@ -3,8 +3,6 @@ import {
   } from "next";
 
 const About: NextPage = () => {
-  // console.log(services);
-
   return (
     <div className="flex flex-col flex-grow px-6 pt-1 ">
       <h6 className="my-3 text-base font-medium">

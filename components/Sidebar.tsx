@@ -12,10 +12,14 @@ const Sidebar = () => {
         src={Profile_Picture}
         alt="Profile Picture"
         className="w-32 h-32 mx-auto rounded-full"
+        priority={true}
       />
       <h2 className="my-4 text-3xl font-medium tracking-wider font-dina">
         <strong>
-          <span>Oscar</span> Nieto Espitia{" "}
+          <span className="text-orange">
+            {"<"}Oscar{"/>"}
+          </span>
+          Nieto Espitia
         </strong>
       </h2>
 
@@ -60,14 +64,17 @@ const Sidebar = () => {
         <p className="my-2"> +52 (462) 148 6009 </p>
       </div>
       <button
-        className="w-8/12 px-5 py-2 text-white bg-black rounded-full cursor-pointer hover:scale-105 focus:outline-none"
-        onClick={() => window.open("mailto:code.sumax@gmail.com")}
+        className="w-8/12 px-5 py-2 text-white rounded-full cursor-pointer hover:scale-105 focus:outline-none bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r"
+        onClick={() =>
+          (window.location.href = "mailto:onietoespitia2@gmail.com")
+        }
+        aria-label="Email me"
       >
         Email me
       </button>
       <button
         onClick={() => {}}
-        className="w-8/12 px-5 py-2 my-4 text-white bg-black rounded-full cursor-pointer focus:outline-none hover:scale-105 "
+        className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r"
       >
         {/* //TODO remove bg black */}
         Change Theme
