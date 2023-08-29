@@ -7,8 +7,13 @@
    src: url("/fonts/Dina.ttc") format("opentype");
 }
 
+@font-face {
+   font-family: Raleway;
+   src: url("../../public/fonts/Raleway-VariableFont_wght.ttf") format("opentype");
+}
+
 body {
-   font-family: sans-serif;
+   font-family: Raleway;
    color: #354358;
 }
 

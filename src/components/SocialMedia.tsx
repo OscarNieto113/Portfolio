@@ -12,7 +12,7 @@ const SocialMedia = ({ link, name, icon }: PropsType): ReactElement => {
 
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <IconComponent className="w-8 h-8 cursor-pointer" /> {name}
+      <IconComponent className="w-8 h-8 cursor-pointer focus:outline-none hover:scale-125" /> {name}
     </a>
   );
 };

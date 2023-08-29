@@ -14,7 +14,16 @@ module.exports = {
     extend: {
       colors: {
         orange: {
-          DEFAULT: '#D4933D'
+          DEFAULT: '#CFA616'
+        },
+        purple: {
+          DEFAULT: '#3b3d54'
+        },
+        lightPurple: {
+          DEFAULT: '#6B6C86'
+        },
+        newGray: {
+          DEFAULT: '#ECEEFF'
         }
       }
     }

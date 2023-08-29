@@ -11,11 +11,11 @@ const ServiceCard: FunctionComponent<{ service: GeneralSkill }> = ({
    }
 
    return (
-      <div className='flex items-center p-2 space-x-4 '>
-         <Icon className='w-12 h-12 text-green' />
+      <div className='flex items-center p-2 space-x-4 rounded-lg bg-lightPurple font-dina'>
+         <Icon className='w-12 h-12 text-orange' />
          <div className=''>
-            <h6 className='font-bold'>{title}</h6>
-            <p dangerouslySetInnerHTML={createMarkup()} />
+            <h6 className='font-bold text-newGray'>{title}</h6>
+            <p className='text-newGray' dangerouslySetInnerHTML={createMarkup()} />
          </div>
       </div>
    )

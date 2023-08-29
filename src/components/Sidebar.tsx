@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { AiFillLinkedin, AiFillGithub, AiFillFilePdf } from "react-icons/ai";
+import DownloadButton from "./DownloadButton";
+import PersoalInformation from "./PersonalInformation";
+import { AiFillLinkedin, AiFillGithub, AiFillFilePdf, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
 import { GoLocation } from "react-icons/go";
 import Profile_Picture from "../../public/profile_picture.webp";
@@ -7,7 +9,7 @@ import SocialMedia from "./SocialMedia";
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className="text-base font-medium">
       <Image
         src={Profile_Picture}
         alt="Profile Picture"
@@ -24,14 +26,11 @@ const Sidebar = () => {
       </h2>
 
       {/*Resume */}
-      <a
-        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full"
-        href="/resume.pdf"
-        download="Oscar Nieto Espitia.pdf"
-      >
-        <AiFillFilePdf className="w-6 h-6" />
-        <span>Download Resume</span>
-      </a>
+      <DownloadButton
+        href={"/resume.pdf"}
+        nameDownload={"Oscar Nieto Espitia.pdf"}
+        icon={AiFillFilePdf}
+      />
 
       {/*Social Media */}
       <div className="flex justify-around w-9/12 my-5 text-black md:w-full">
@@ -54,18 +53,16 @@ const Sidebar = () => {
 
       {/*Persona Info */}
       <div
-        className="py-4 my-5 bg-gray-200 dark:bg-black-500"
+        className="py-4 my-5 bg-newGray dark:bg-black-500"
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
-        <div className="flex items-center justify-center">
-          <GoLocation className="mr-2" /> <span>México</span>
-        </div>
-        <p className="my-2 "> onietoespitia2@gmail.com </p>
-        <p className="my-2"> +52 (462) 148 6009 </p>
+        <PersoalInformation description="México" icon={GoLocation} />
+        <PersoalInformation description="onietoespitia2@gmail.com" icon={AiOutlineMail} />
+        <PersoalInformation description="+52 (462) 148 6009" icon={AiOutlinePhone} />
       </div>
       <button
         onClick={() => {}}
-        className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600"
+        className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-purple"
       >
         {/* //TODO remove bg black */}
         Change Theme
