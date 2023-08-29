@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react'
 import { GeneralSkill } from '../data/generalSkills'
 
-const ServiceCard: FunctionComponent<{ service: GeneralSkill }> = ({
+const GeneralSkill: FunctionComponent<{ service: GeneralSkill }> = ({
    service: { Icon, title, about },
 }) => {
    function createMarkup() {
@@ -21,4 +21,4 @@ const ServiceCard: FunctionComponent<{ service: GeneralSkill }> = ({
    )
 }
 
-export default ServiceCard
+export default GeneralSkill

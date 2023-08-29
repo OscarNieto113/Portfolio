@@ -1,12 +1,6 @@
-import {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetStaticProps,
-  GetStaticPropsContext,
-  NextPage,
-} from "next";
-import ServiceCard from "../components/Card";
-import { generalSkills, GeneralSkill } from "../data/generalSkills";
+import { NextPage } from "next";
+import GeneralSkill from "../components/Card";
+import { generalSkills } from "../data/generalSkills";
 
 const About: NextPage = () => {
   return (
@@ -33,11 +27,11 @@ const About: NextPage = () => {
         </p>
       </div>
       <div
-        className="flex-grow p-4 mt-5 bg-newGray"
+        className="flex-grow p-4 mt-5 rounded-lg bg-newGray"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
-        <h4 className="my-3 text-xl font-semibold tracking-wide">
-          What I am doing
+        <h4 className="text-xl font-semibold tracking-wide ">
+          <strong>What am I doing?</strong>
         </h4>
 
         <div className="grid gap-6 my-3 md:grid-cols-2 ">
@@ -47,11 +41,22 @@ const About: NextPage = () => {
               className="col-span-2 md:col-span-1 "
               key={generalSkills.title}
             >
-              <ServiceCard service={generalSkills} />
+              <GeneralSkill service={generalSkills} />
             </div>
           ))}
         </div>
       </div>
+
+      <div className="my-2 text-base font-medium"></div>
+      <h4 className="text-xl font-semibold tracking-wide ">
+        <strong>Personal Interests</strong>
+      </h4>
+      <p className="mb-2">
+        Beyond the realm of coding, you'll often find me immersed in fantasy
+        literature. I'm an avid reader and a devoted fan of{" "}
+        <b>Brandon Sanderson's</b> captivating storytelling. Additionally, I'm
+        deeply passionate about role-playing games <b>(RPGs)</b>.
+      </p>
     </div>
   );
 };
