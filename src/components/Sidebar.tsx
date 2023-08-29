@@ -65,7 +65,7 @@ const Sidebar = () => {
       </div>
       <button
         onClick={() => {}}
-        className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r"
+        className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-gradient-to-b from-gray-900 to-gray-600"
       >
         {/* //TODO remove bg black */}
         Change Theme
