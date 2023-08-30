@@ -27,7 +27,7 @@ const About: NextPage = () => {
         </p>
       </div>
       <div
-        className="flex-grow p-4 mt-5 rounded-lg bg-newGray"
+        className="flex-grow p-4 mt-5 bg-gray-300 rounded-lg"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h4 className="text-xl font-semibold tracking-wide ">

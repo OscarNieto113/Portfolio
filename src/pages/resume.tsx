@@ -1,12 +1,11 @@
 import SkillCarousel from "@/components/Carrousel";
-import Bar from "../components/Bar";
 import Section from "../components/Section";
-import { languages} from "../data/skills";
+import { companies} from "../data/companies";
 
 const Resume = () => {
   return (
-    <div className="px-6">
-      <div className="grid gap-6 md:grid-cols-2">
+    <div >
+      <div className="grid gap-6 p-4 md:grid-cols-2">
         <Section
           title="Education"
           subTitle="Computer Science"
@@ -22,7 +21,7 @@ const Resume = () => {
           iconPath="/icons/aifa.ico"
         />
       </div>
-      <SkillCarousel skills={languages} />
+      <SkillCarousel companies={companies} subtitle="Companies I've Added Value" />
       <div className="grid gap-9 md:grid-cols-2">
       
         {["Language & Framework", "Tools & Software"].map(

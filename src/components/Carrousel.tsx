@@ -1,37 +1,52 @@
 import React from "react";
-import Slider from "react-slick";
-import { Skill } from "../data/skills"; // Import your skill data
+import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { Company } from "../data/companies"; // Import the Company interface
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+interface Props {
+  companies: Company[]; // Change "skills" to "companies"
+  options?: EmblaOptionsType;
+  subtitle?: string;
+}
 
-const SkillCarousel = ({ skills }) => { // Remove the ":Skills" after skills
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+const EmblaCarousel: React.FC<Props> = ({ companies, options = {}, subtitle }) => {
+  const [emblaRef] = useEmblaCarousel(
+    {
+      ...options,
+      loop: true,
+    },
+    [
+      Autoplay({
+        delay: 2000,
+        stopOnInteraction: true,
+        jump: false,
+        playOnInit: true,
+        stopOnMouseEnter: true,
+      }),
+    ]
+  );
 
   return (
-    <div className="skill-carousel">
-      <Slider {...settings}>
-        {skills.map((skill) => (
-          <div key={skill.id} className="skill-card">
-            <div className="skill-icon">
-              <skill.Icon />
+    <div className="px-5 py-3 mx-auto bg-gray-300 rounded-lg max-w embla">
+      {subtitle && <h2 className="my-3 text-2xl font-bold text-center">{subtitle}</h2>}
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="flex space-x-10 embla__container">
+          {companies.map((company) => (
+            <div
+            >
+              <div className="w-16 h-16 p-3 text-4xl bg-gray-400 rounded-full embla__slide__icon">
+                <img
+                  src={company.iconPath}
+                  alt={company.companyName}
+                  className="w-full h-full"
+                />
+              </div>
             </div>
-            <h3>{skill.name}</h3>
-            <p>{skill.description}</p>
-            <p>{skill.time} years</p>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default SkillCarousel;
+export default EmblaCarousel;
