@@ -9,7 +9,8 @@ export interface Skill {
   id: string;
   Icon: IconType;
   name: string;
-  level: string;
+  description: string;
+  time: string;
 }
 
 export const languages: Skill[] = [
@@ -17,6 +18,15 @@ export const languages: Skill[] = [
     id: generateUniqueId(),
     Icon: BsCircleFill,
     name: "Python",
-    level: "45",
+    description: "45",
+    time: "45",
   },
+  {
+    id: generateUniqueId(),
+    Icon: BsCircleFill,
+    name: "Python",
+    description: "45",
+    time: "45",
+  },
+  
 ];
