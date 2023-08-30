@@ -1,3 +1,4 @@
+import SkillCarousel from "@/components/Carrousel";
 import Bar from "../components/Bar";
 import Section from "../components/Section";
 import { languages} from "../data/skills";
@@ -21,8 +22,9 @@ const Resume = () => {
           iconPath="/icons/aifa.ico"
         />
       </div>
-
+      <SkillCarousel skills={languages} />
       <div className="grid gap-9 md:grid-cols-2">
+      
         {["Language & Framework", "Tools & Software"].map(
           (sectionTitle, index) => (
             <div key={index}>
