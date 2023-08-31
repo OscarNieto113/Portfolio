@@ -39,7 +39,7 @@ const EmblaCarousel: React.FC<Props> = ({
       <div className="embla__viewport" ref={emblaRef}>
         <div className="flex space-x-10 embla__container">
           {companies.map((company) => (
-            <div>
+            <div key={company.id}>
               <div className="w-16 h-16 p-3 text-4xl bg-gray-400 rounded-full embla__slide__icon">
                 <img
                   src={company.iconPath}
