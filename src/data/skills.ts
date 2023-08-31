@@ -1,207 +1,188 @@
 import { IconType } from "react-icons";
-import { BsCircleFill } from "react-icons/bs";
+import { AiFillHtml5 } from "react-icons/ai";
+import {
+  BiLogoAws,
+  BiLogoCPlusPlus,
+  BiLogoCss3,
+  BiLogoFirebase,
+  BiLogoGoogleCloud,
+  BiLogoJavascript,
+  BiLogoJquery,
+  BiLogoMongodb,
+  BiLogoNodejs,
+  BiLogoPython,
+  BiLogoReact,
+  BiLogoTailwindCss,
+} from "react-icons/bi";
+import { BsFillBootstrapFill, BsGit } from "react-icons/bs";
+import {
+  SiKeras,
+  SiKotlin,
+  SiProxmox,
+  SiTensorflow,
+  SiTruenas,
+  SiTypescript,
+  SiVite,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { GrMysql } from "react-icons/gr";
+import { FaCloudflare } from "react-icons/fa";
+import { SiUbiquiti } from "react-icons/si";
+import { IoLogoVercel } from "react-icons/io5";
 
 function generateUniqueId(): string {
-    return Math.random().toString(36).substr(2, 9);
-  }
+  return Math.random().toString(36).substr(2, 9);
+}
 
 export interface Skill {
   id: string;
   Icon: IconType;
   name: string;
-  description: string;
-  time: string;
 }
 
-export const languages: Skill[] = [
+export const languagesAndTools: Skill[] = [
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: AiFillHtml5,
+    name: "HTML",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoCss3,
+    name: "CSS",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoJavascript,
+    name: "Javascript",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiTypescript,
+    name: "Typescript",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiVite,
+    name: "Vite",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoNodejs,
+    name: "NodeJS",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
+    Icon: BiLogoPython,
     name: "Python",
-    description: "45",
-    time: "45",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoCPlusPlus,
+    name: "C++",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiKotlin,
+    name: "Kotlin",
+  },
+];
+
+export const librariesAndFrameworks: Skill[] = [
+  {
+    id: generateUniqueId(),
+    Icon: BiLogoReact,
+    name: "React",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: TbBrandNextjs,
+    name: "NextJS",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoTailwindCss,
+    name: "Tailwind",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BsFillBootstrapFill,
+    name: "Bootstrap",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoJquery,
+    name: "Jquery",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiTensorflow,
+    name: "Tensorflow",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiKeras,
+    name: "Keras",
+  },
+];
+
+export const databases: Skill[] = [
+  {
+    id: generateUniqueId(),
+    Icon: GrMysql,
+    name: "MySQL",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoMongodb,
+    name: "MongoDB",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoFirebase,
+    name: "Firebase",
+  },
+];
+
+export const others: Skill[] = [
+  {
+    id: generateUniqueId(),
+    Icon: BsGit,
+    name: "Git",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiProxmox,
+    name: "Proxmox",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiTruenas,
+    name: "TrueNAS",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: FaCloudflare,
+    name: "Cloudflare",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: SiUbiquiti,
+    name: "Ubiquiti",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoGoogleCloud,
+    name: "GCP",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: BiLogoAws,
+    name: "AWS",
   },
   {
     id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
+    Icon: IoLogoVercel,
+    name: "Vercel",
   },
-  {
-    id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
-  },
-  {
-    id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
-  },
-  {
-    id: generateUniqueId(),
-    Icon: BsCircleFill,
-    name: "Python",
-    description: "45",
-    time: "45",
-  },
-  
 ];

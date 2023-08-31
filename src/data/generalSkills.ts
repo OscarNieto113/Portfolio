@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { AiFillCode, AiFillDatabase } from "react-icons/ai";
+import { AiFillCode, AiFillDatabase, AiFillProject } from "react-icons/ai";
 import { BiSolidServer } from "react-icons/bi";
 import { BsHddNetworkFill, BsWindowFullscreen } from "react-icons/bs";
 
@@ -15,6 +15,13 @@ export interface GeneralSkill {
 }
 
 export const generalSkills: GeneralSkill[] = [
+  {
+    id: generateUniqueId(),
+    Icon: AiFillProject,
+    title: "Project Management",
+    about:
+      "Proficient in guiding <b>cross-functional teams</b>, I ensure the efficient achievement of <b>project timelines</b> and <b>objectives</b> by implementing <b>CMMI</b> practices.",
+  },
   {
     id: generateUniqueId(),
     Icon: BsWindowFullscreen,
@@ -49,5 +56,5 @@ export const generalSkills: GeneralSkill[] = [
     title: "Networking",
     about:
       "Gained proficiency in network protocols, configurations, and security by experimenting with my <b>Homelab Server</b>. Currently using <b>Ubiquiti</b> gear.",
-  }
+  },
 ];

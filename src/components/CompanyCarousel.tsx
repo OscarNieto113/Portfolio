@@ -9,7 +9,7 @@ interface Props {
   subtitle?: string;
 }
 
-const EmblaCarousel: React.FC<Props> = ({
+const CompanyCarrousel: React.FC<Props> = ({
   companies,
   options = {},
   subtitle,
@@ -24,15 +24,15 @@ const EmblaCarousel: React.FC<Props> = ({
     },
     [
       Autoplay({
-        delay: 1000,
+        delay: 2000,
+        stopOnInteraction: false,
         stopOnMouseEnter: true,
       }),
     ]
   );
 
-
   return (
-    <div className="px-5 py-3 mx-auto bg-gray-300 rounded-lg max-w embla">
+    <div className="px-5 py-3 mx-auto rounded-lg bg-newGray max-w embla">
       {subtitle && (
         <h2 className="my-3 text-2xl font-bold text-center">{subtitle}</h2>
       )}
@@ -40,7 +40,7 @@ const EmblaCarousel: React.FC<Props> = ({
         <div className="flex space-x-10 embla__container">
           {companies.map((company) => (
             <div key={company.id}>
-              <div className="w-16 h-16 p-3 text-4xl bg-gray-400 rounded-full embla__slide__icon">
+              <div className="w-16 h-16 p-3 text-4xl transition-transform transform bg-gray-400 rounded-full embla__slide__icon hover:scale-110">
                 <img
                   src={company.iconPath}
                   alt={company.companyName}
@@ -55,4 +55,4 @@ const EmblaCarousel: React.FC<Props> = ({
   );
 };
 
-export default EmblaCarousel;
+export default CompanyCarrousel;

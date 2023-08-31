@@ -1,10 +1,17 @@
-import SkillCarousel from "@/components/Carrousel";
+import CompanyCarrousel from "../components/CompanyCarousel";
 import Section from "../components/Section";
-import { companies} from "../data/companies";
+import SkillsList from "@/components/SkillList";
+import { companies } from "../data/companies";
+import {
+  languagesAndTools,
+  librariesAndFrameworks,
+  databases,
+  others,
+} from "../data/skills";
 
 const Resume = () => {
   return (
-    <div >
+    <div>
       <div className="grid gap-6 p-4 md:grid-cols-2">
         <Section
           title="Education"
@@ -21,21 +28,18 @@ const Resume = () => {
           iconPath="/icons/aifa.ico"
         />
       </div>
-      <SkillCarousel companies={companies} subtitle="Companies I've Added Value" />
-      <div className="grid gap-9 md:grid-cols-2">
-      
-        {["Language & Framework", "Tools & Software"].map(
-          (sectionTitle, index) => (
-            <div key={index}>
-              <h2 className="my-3 text-2xl font-bold">{sectionTitle}</h2>
-              {/*<div>
-              {(index === 0 ? languages : tools).map((item) => (
-                <Bar value={item} key={item.id} />
-              ))}
-            </div>*/}
-            </div>
-          )
-        )}
+      <CompanyCarrousel
+        companies={companies}
+        subtitle="Companies I've Added Value"
+      />
+      <div className="grid gap-6 px-4 md:grid-cols-2">
+        <SkillsList skills={languagesAndTools} title="Languages & Tools" />
+        <SkillsList
+          skills={librariesAndFrameworks}
+          title="Libraries and Frameworks"
+        />
+        <SkillsList skills={databases} title="Databases" />
+        <SkillsList skills={others} title="Others" />
       </div>
     </div>
   );

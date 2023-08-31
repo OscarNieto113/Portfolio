@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col justify-between px-5 py-3 bg-gray-300 md:flex-row md:items-center">
+    <div className="flex flex-col justify-between px-5 py-3 bg-newGray md:flex-row md:items-center">
       <div className="flex items-center justify-between w-full md:w-auto">
         <span className="text-xl font-bold border-b-4 md:text-2xl border-orange">
           {active}

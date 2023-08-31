@@ -27,13 +27,9 @@ const About: NextPage = () => {
         </p>
       </div>
       <div
-        className="flex-grow p-4 mt-5 bg-gray-300 rounded-lg"
+        className="flex-grow p-4 mt-5 rounded-lg bg-newGray"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
-        <h4 className="text-xl font-semibold tracking-wide ">
-          <strong>What am I doing?</strong>
-        </h4>
-
         <div className="grid gap-6 my-3 md:grid-cols-2 ">
           {/* children's initial and animate property should be same as the parent during a stagger effect  */}
           {generalSkills.map((generalSkills) => (
