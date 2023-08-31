@@ -1,5 +1,19 @@
 import { ReactElement } from "react";
 
+/**
+ * Represents a section component.
+ *
+ * @component
+ *
+ * @param {object} props - The component's props.
+ * @param {string} props.title - The title of the section.
+ * @param {string} props.subTitle - The subtitle of the section.
+ * @param {string} props.description - The description of the section.
+ * @param {string} props.date - The date associated with the section.
+ * @param {string} props.iconPath - The path to the icon for the section.
+ *
+ * @returns {React.ReactElement} A React element representing the section.
+ */
 type PropsType = {
   title: string;
   subTitle: string;

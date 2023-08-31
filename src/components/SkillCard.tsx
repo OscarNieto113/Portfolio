@@ -1,6 +1,16 @@
 import React from "react";
 import { Skill } from "../data/skills"; // Import your skill data
 
+/**
+ * Represents a card displaying a specific skill.
+ *
+ * @component
+ *
+ * @param {object} props - The component's props.
+ * @param {Skill} props.skill - The skill object to display.
+ *
+ * @returns {React.ReactElement} A React element representing the skill card.
+ */
 interface SkillProps {
   skill: Skill;
 }

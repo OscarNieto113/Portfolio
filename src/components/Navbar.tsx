@@ -3,13 +3,20 @@ import { useRouter } from "next/router";
 import NavbarItem from "./NavbarItem";
 
 const navItems = [
-  { name: "About", route: "/" },
+  { name: "About Me", route: "/" },
   { name: "Resume", route: "/resume" },
-  { name: "Portfolio", route: "/projects" },
-  { name: "Contact", route: "/contact" },
+  { name: "Projects", route: "/projects" },
+  { name: "Contact Me", route: "/contact" },
   { name: "Feedback", route: "/feedback" },
 ];
 
+/**
+ * Represents a navigation bar component.
+ *
+ * @component
+ *
+ * @returns {React.ReactElement} A React element representing the navigation bar.
+ */
 const Navbar = () => {
   const { pathname } = useRouter();
   const initialActive =

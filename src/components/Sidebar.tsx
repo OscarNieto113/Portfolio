@@ -7,6 +7,13 @@ import { GoLocation } from "react-icons/go";
 import Profile_Picture from "../../public/profile_picture.webp";
 import SocialMedia from "./SocialMedia";
 
+/**
+ * Represents a sidebar component displaying personal information and links to social media.
+ *
+ * @component
+ *
+ * @returns {React.ReactElement} A React element representing the sidebar.
+ */
 const Sidebar = () => {
   return (
     <div className="text-base font-medium">

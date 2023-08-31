@@ -11,7 +11,7 @@ import {
 
 const Resume = () => {
   return (
-    <div>
+    <div className="mx-4">
       <div className="grid gap-6 p-4 md:grid-cols-2">
         <Section
           title="Education"

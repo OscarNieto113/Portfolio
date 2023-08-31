@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import GeneralSkill from "../components/Card";
+import GeneralSkill from "../components/GeneralSkillCard";
 import { generalSkills } from "../data/generalSkills";
 
 const About: NextPage = () => {

@@ -1,5 +1,18 @@
 import Link from "next/link";
 
+/**
+ * Represents an item in a navigation bar.
+ *
+ * @component
+ *
+ * @param {object} props - The component's props.
+ * @param {string} props.active - The currently active item in the navigation bar.
+ * @param {(active: string) => void} props.setActive - A function to set the active item.
+ * @param {string} props.name - The name of the navigation item.
+ * @param {string} props.route - The route to navigate to when the item is clicked.
+ *
+ * @returns {React.ReactElement} A React element representing the navigation item.
+ */
 type NavItemProps = {
   active: string;
   setActive: (active: string) => void;
