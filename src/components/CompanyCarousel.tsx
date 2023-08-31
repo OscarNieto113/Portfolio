@@ -3,6 +3,18 @@ import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Company } from "../data/companies"; // Import the Company interface
 
+/**
+ * Represents a carousel of company logos.
+ *
+ * @component
+ *
+ * @param {object} props - The component's props.
+ * @param {Company[]} props.companies - An array of company objects to display logos.
+ * @param {EmblaOptionsType} [props.options] - Embla carousel options.
+ * @param {string} [props.subtitle] - An optional subtitle for the carousel.
+ *
+ * @returns {React.ReactElement} A React element representing the company carousel.
+ */
 interface Props {
   companies: Company[]; // Change "skills" to "companies"
   options?: EmblaOptionsType;
