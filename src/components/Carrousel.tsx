@@ -9,31 +9,37 @@ interface Props {
   subtitle?: string;
 }
 
-const EmblaCarousel: React.FC<Props> = ({ companies, options = {}, subtitle }) => {
+const EmblaCarousel: React.FC<Props> = ({
+  companies,
+  options = {},
+  subtitle,
+}) => {
   const [emblaRef] = useEmblaCarousel(
     {
       ...options,
       loop: true,
+      align: "center",
+      containScroll: false,
+      dragFree: true,
     },
     [
       Autoplay({
-        delay: 2000,
-        stopOnInteraction: true,
-        jump: false,
-        playOnInit: true,
+        delay: 1000,
         stopOnMouseEnter: true,
       }),
     ]
   );
 
+
   return (
     <div className="px-5 py-3 mx-auto bg-gray-300 rounded-lg max-w embla">
-      {subtitle && <h2 className="my-3 text-2xl font-bold text-center">{subtitle}</h2>}
+      {subtitle && (
+        <h2 className="my-3 text-2xl font-bold text-center">{subtitle}</h2>
+      )}
       <div className="embla__viewport" ref={emblaRef}>
         <div className="flex space-x-10 embla__container">
           {companies.map((company) => (
-            <div
-            >
+            <div>
               <div className="w-16 h-16 p-3 text-4xl bg-gray-400 rounded-full embla__slide__icon">
                 <img
                   src={company.iconPath}
