@@ -114,7 +114,7 @@ export const projects: Project[] = [
       { id: "5", Icon: TbBrandNextjs, name: "Redux" },
       { id: "6", Icon: TbBrandNextjs, name: "Node.js" },
     ],
-    category: ["Project Management", "Project Management"],
+    category: ["Project Management", "Frontend Development"],
   },
 ];
 

@@ -1,61 +1,58 @@
-import React from "react";
-import { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { Project } from "@/data/projects";
+import { Skill } from "../../data/skills";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
-
 import Image from "next/image";
 
 const ProjectCard: FunctionComponent<{
   project: Project;
-}> = ({
-  project: {
-    id,
-    nameProject,
-    imgPath,
-    urlDeploy,
-    urlGithub,
-    description,
-    languagesAndTools,
-    librariesAndFrameworks,
-    databases,
-    others,
-  },
-}) => {
+}> = ({ project }) => {
   const [showDetail, setShowDetail] = useState(false);
+
+  const toggleDetail = () => setShowDetail(!showDetail);
+
+  const renderTechTags = (techList: Skill[]) => {
+    return techList.map((tech) => (
+      <span
+        key={tech.id}
+        className="px-2 py-1 my-1 bg-gray-200 rounded-sm dark:bg-dark-200"
+      >
+        {tech.name}
+      </span>
+    ));
+  };
+
+  const imageProps = {
+    src: project.imgPath,
+    alt: project.nameProject,
+    layout: "responsive",
+    height: 150,
+    width: 300,
+  };
 
   return (
     <div>
       <Image
-        src={imgPath}
-        alt={nameProject}
+        {...imageProps}
         className="cursor-pointer"
-        onClick={() => setShowDetail(true)}
-        layout="responsive"
-        height="150"
-        width="300"
+        onClick={toggleDetail}
       />
-      <p className="my-2 text-center">{nameProject}</p>
+      <p className="my-2 text-center">{project.nameProject}</p>
 
       {showDetail && (
         <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
           <div>
-            <Image
-              src={imgPath}
-              alt={nameProject}
-              layout="responsive"
-              height="150"
-              width="300"
-            />
+            <Image {...imageProps} />
             <div className="flex justify-center my-4 space-x-3">
               <a
-                href={urlGithub}
+                href={project.urlGithub}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
               >
                 <AiFillGithub /> <span>Github</span>
               </a>
               <a
-                href={urlDeploy}
+                href={project.urlDeploy}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
               >
                 <AiFillProject /> <span>Project</span>
@@ -65,47 +62,19 @@ const ProjectCard: FunctionComponent<{
 
           <div>
             <h2 className="mb-3 text-xl font-medium md:text-2xl">
-              {nameProject}
+              {project.nameProject}
             </h2>
-            <h3 className="mb-3 font-medium">{description}</h3>
+            <h3 className="mb-3 font-medium">{project.description}</h3>
             <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
-            {languagesAndTools.map((tech) => (
-                <span
-                  id={tech.id}
-                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
-                >
-                  {tech.name}
-                </span>
-              ))}
-              {librariesAndFrameworks.map((tech) => (
-                <span
-                  id={tech.id}
-                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
-                >
-                  {tech.name}
-                </span>
-              ))}
-              {databases.map((tech) => (
-                <span
-                  id={tech.id}
-                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
-                >
-                  {tech.name}
-                </span>
-              ))}
-              {others.map((tech) => (
-                <span
-                  id={tech.id}
-                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
-                >
-                  {tech.name}
-                </span>
-              ))}
+              {renderTechTags(project.languagesAndTools)}
+              {renderTechTags(project.librariesAndFrameworks)}
+              {renderTechTags(project.databases)}
+              {renderTechTags(project.others)}
             </div>
           </div>
 
           <button
-            onClick={() => setShowDetail(false)}
+            onClick={toggleDetail}
             className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200"
           >
             <MdClose size={30} />

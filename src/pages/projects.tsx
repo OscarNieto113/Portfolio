@@ -1,32 +1,41 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ProjectCard from "../components/Project/ProjectCard";
-import ProjectsNavbar from "../components/Project/ProjectsNavbar";
 import { projects as projectsData } from "../data/projects";
-import { Category } from "../data/projects";
+import  FilterDropdown  from "@/components/Project/FilterDropdown";
+import { generalSkills, GeneralSkill } from "../data/generalSkills";
+
+// Extract unique category values from generalSkills
+const categories: string[] = Array.from(
+  new Set(generalSkills.map((skill: GeneralSkill) => skill.title))
+);
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("all");
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
-  const handlerFilterCategory = (category: Category | "all") => {
-    if (category === "all") {
+  const handleSelectFilter = (selectedFilters: string[]) => {
+    setSelectedFilters(selectedFilters);
+
+    // Apply selected filters to the projects.
+    if (selectedFilters.length === 0) {
       setProjects(projectsData);
-      setActive(category);
-      return;
+      setActive("all");
+    } else {
+      const filteredProjects = projectsData.filter((project) =>
+        selectedFilters.every((filter) => project.category.includes(filter))
+      );
+      setProjects(filteredProjects);
+      setActive("filtered");
     }
-
-    const newArray = projectsData.filter((project) =>
-      project.category.includes(category)
-    );
-    setProjects(newArray);
-    setActive(category);
   };
 
   return (
     <div className="px-5 py-2 overflow-y-scroll" style={{ height: "65vh" }}>
-      <ProjectsNavbar
-        handlerFilterCategory={handlerFilterCategory}
-        active={active}
+      <FilterDropdown
+        categories={categories}
+        selectedFilters={selectedFilters}
+        onSelectFilter={handleSelectFilter}
       />
 
       <div className="relative grid grid-cols-12 gap-4 my-3">
