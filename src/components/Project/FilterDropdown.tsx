@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 
 interface FilterDropdownProps {
   categories: string[];
@@ -13,6 +13,13 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // Close the dropdown when a filter is selected
+  useEffect(() => {
+    if (selectedFilters.length > 0) {
+      setIsDropdownOpen(false);
+    }
+  }, [selectedFilters]);
+
   const handleFilterSelection = (category: string) => {
     const updatedFilters = selectedFilters.includes(category)
       ? selectedFilters.filter((filter) => filter !== category)
@@ -23,52 +30,47 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
 
   return (
     <div className="relative inline-block text-left">
-      <div>
-        <button
-          type="button"
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring focus:ring-blue-500 active:bg-gray-200"
-          id="dropdownHoverButton"
-          data-dropdown-toggle="dropdownHover"
-          data-dropdown-trigger="hover"
-          aria-expanded={isDropdownOpen}
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+      <button
+        type="button"
+        className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring focus:ring-blue-500 active:bg-gray-200"
+        aria-expanded={isDropdownOpen}
+        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+      >
+        Filter by Category
+        {/* Add an arrow down icon */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={`w-5 h-5 ml-2 transition-transform transform ${
+            isDropdownOpen ? "rotate-180" : "rotate-0"
+          }`}
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
         >
-          Filter by Category
-          {/* Add an arrow down icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 ml-2"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
-      </div>
+          <path
+            fillRule="evenodd"
+            d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
 
       {/* Dropdown content */}
       {isDropdownOpen && (
         <div
-          className="right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
+          className="absolute z-50 w-64 mt-2 origin-top-right bg-white divide-y divide-gray-100 right-50" // Add z-50 to set a higher z-index
           role="menu"
-          aria-labelledby="dropdown-button"
+          aria-labelledby="dropdownHoverButton"
         >
           {categories.map((category) => (
             <div key={category} className="px-4 py-2">
               <label className="inline-flex items-center">
                 <input
                   type="checkbox"
-                  className="w-5 h-5 text-blue-600 form-checkbox"
+                  className="w-5 h-5 text-orange form-checkbox"
                   value={category}
                   checked={selectedFilters.includes(category)}
-                  onChange={() =>
-                    handleFilterSelection(category)
-                  }
+                  onChange={() => handleFilterSelection(category)}
                 />
                 <span className="ml-2">{category}</span>
               </label>
