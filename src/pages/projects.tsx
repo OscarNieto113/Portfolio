@@ -1,69 +1,43 @@
-import { ChangeEvent, MouseEventHandler, useState } from "react";
-import FilteredProjects from "@/components/Project/FilteredProjects";
-import {projects, Project} from "../data/projects"
-import ProjectFilterRecomended from "@/components/Project/ProjectFilterRecomended";
-import ProjectSidebar from "@/components/Project/Sidebar/ProjectSidebar";
-import ProjectCard from "@/components/Project/ProjectCard";
-
+import { useState } from "react";
+import ProjectCard from "../components/Project/ProjectCard";
+import ProjectsNavbar from "../components/Project/ProjectsNavbar";
+import { projects as projectsData } from "../data/projects";
+import { Category } from "../data/projects";
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [projects, setProjects] = useState(projectsData);
+  const [active, setActive] = useState("all");
 
-  // ----------- Input Filter -----------
-  const [query, setQuery] = useState<string>("");
-
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value);
-  };
-
-  const filteredItems = projects.filter(
-    (project) => project.nameProject.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  );
-
-  // ----------- Radio Filtering -----------
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSelectedCategory(event.target.value);
-  };
-
-  // ------------ Button Filtering -----------
-  const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
-    setSelectedCategory(event.currentTarget.value);
-  };
-
-  function filteredData(projects: Project[], selected: string | null, query: string) {
-    let filteredProjects = projects;
-
-    // Filtering Input Items
-    if (query) {
-      filteredProjects = filteredItems;
+  const handlerFilterCategory = (category: Category | "all") => {
+    if (category === "all") {
+      setProjects(projectsData);
+      setActive(category);
+      return;
     }
 
-    // Applying selected filter
-    if (selected) {
-      filteredProjects = filteredProjects.filter(
-        ({ nameProject, languagesAndTools }) => {
-          const foundLanguage = languagesAndTools.find(
-            (skill) => skill.name === selected
-          );
-          return foundLanguage !== undefined;
-        }
-      );
-    }
-
-    return filteredProjects.map((project) => (
-      <ProjectCard key={project.id} project={project} /> // Render ProjectCard component
-    ));
-  }
-
-  const result = filteredData(projects, selectedCategory, query);
+    const newArray = projectsData.filter((project) =>
+      project.category.includes(category)
+    );
+    setProjects(newArray);
+    setActive(category);
+  };
 
   return (
-    <>
-      <ProjectSidebar handleChange={handleChange} />
-      <ProjectFilterRecomended handleClick={handleClick} />
-      <FilteredProjects result={result} />
-    </>
+    <div className="px-5 py-2 overflow-y-scroll" style={{ height: "65vh" }}>
+      <ProjectsNavbar
+        handlerFilterCategory={handlerFilterCategory}
+        active={active}
+      />
+
+      <div className="relative grid grid-cols-12 gap-4 my-3">
+        {projects.map((project) => (
+          <div className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200">
+            <ProjectCard project={project} key={project.nameProject} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
-}
+};
 
 export default Projects;
