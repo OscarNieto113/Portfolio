@@ -35,19 +35,11 @@ const ProjectCard: FunctionComponent<{
         height="150"
         width="300"
       />
-      {/* <img
-          src={image_path}
-          alt={name}
-          className="cursor-pointer"
-          onClick={() => setShowDetail(true)}
-        /> */}
       <p className="my-2 text-center">{nameProject}</p>
 
       {showDetail && (
         <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
           <div>
-            {/* <img src={image_path} alt={name} /> */}
-
             <Image
               src={imgPath}
               alt={nameProject}
@@ -78,10 +70,10 @@ const ProjectCard: FunctionComponent<{
             <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
               {languagesAndTools.map((tech) => (
                 <span
-                  key={tech}
+                  id={(tech.id)}
                   className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
                 >
-                  {tech}
+                  {tech.name}
                 </span>
               ))}
             </div>

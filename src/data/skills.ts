@@ -30,10 +30,6 @@ import { FaCloudflare } from "react-icons/fa";
 import { SiUbiquiti } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 
-function generateUniqueId(): string {
-  return Math.random().toString(36).substr(2, 9);
-}
-
 export interface Skill {
   id: string;
   Icon: IconType;
@@ -42,47 +38,47 @@ export interface Skill {
 
 export const languagesAndTools: Skill[] = [
   {
-    id: generateUniqueId(),
+    id: "1",
     Icon: AiFillHtml5,
     name: "HTML",
   },
   {
-    id: generateUniqueId(),
+    id: "2",
     Icon: BiLogoCss3,
     name: "CSS",
   },
   {
-    id: generateUniqueId(),
+    id: "3",
     Icon: BiLogoJavascript,
     name: "Javascript",
   },
   {
-    id: generateUniqueId(),
+    id: "4",
     Icon: SiTypescript,
     name: "Typescript",
   },
   {
-    id: generateUniqueId(),
+    id: "5",
     Icon: SiVite,
     name: "Vite",
   },
   {
-    id: generateUniqueId(),
+    id: "6",
     Icon: BiLogoNodejs,
     name: "NodeJS",
   },
   {
-    id: generateUniqueId(),
+    id: "7",
     Icon: BiLogoPython,
     name: "Python",
   },
   {
-    id: generateUniqueId(),
+    id: "8",
     Icon: BiLogoCPlusPlus,
     name: "C++",
   },
   {
-    id: generateUniqueId(),
+    id: "9",
     Icon: SiKotlin,
     name: "Kotlin",
   },
@@ -90,37 +86,37 @@ export const languagesAndTools: Skill[] = [
 
 export const librariesAndFrameworks: Skill[] = [
   {
-    id: generateUniqueId(),
+    id: "10",
     Icon: BiLogoReact,
     name: "React",
   },
   {
-    id: generateUniqueId(),
+    id: "11",
     Icon: TbBrandNextjs,
     name: "NextJS",
   },
   {
-    id: generateUniqueId(),
+    id: "12",
     Icon: BiLogoTailwindCss,
     name: "Tailwind",
   },
   {
-    id: generateUniqueId(),
+    id: "13",
     Icon: BsFillBootstrapFill,
     name: "Bootstrap",
   },
   {
-    id: generateUniqueId(),
+    id: "14",
     Icon: BiLogoJquery,
     name: "Jquery",
   },
   {
-    id: generateUniqueId(),
+    id: "15",
     Icon: SiTensorflow,
     name: "Tensorflow",
   },
   {
-    id: generateUniqueId(),
+    id: "16",
     Icon: SiKeras,
     name: "Keras",
   },
@@ -128,17 +124,17 @@ export const librariesAndFrameworks: Skill[] = [
 
 export const databases: Skill[] = [
   {
-    id: generateUniqueId(),
+    id: "17",
     Icon: GrMysql,
     name: "MySQL",
   },
   {
-    id: generateUniqueId(),
+    id: "18",
     Icon: BiLogoMongodb,
     name: "MongoDB",
   },
   {
-    id: generateUniqueId(),
+    id: "19",
     Icon: BiLogoFirebase,
     name: "Firebase",
   },
@@ -146,42 +142,42 @@ export const databases: Skill[] = [
 
 export const others: Skill[] = [
   {
-    id: generateUniqueId(),
+    id: "20",
     Icon: BsGit,
     name: "Git",
   },
   {
-    id: generateUniqueId(),
+    id: "21",
     Icon: SiProxmox,
     name: "Proxmox",
   },
   {
-    id: generateUniqueId(),
+    id: "22",
     Icon: SiTruenas,
     name: "TrueNAS",
   },
   {
-    id: generateUniqueId(),
+    id: "23",
     Icon: FaCloudflare,
     name: "Cloudflare",
   },
   {
-    id: generateUniqueId(),
+    id: "24",
     Icon: SiUbiquiti,
     name: "Ubiquiti",
   },
   {
-    id: generateUniqueId(),
+    id: "25",
     Icon: BiLogoGoogleCloud,
     name: "GCP",
   },
   {
-    id: generateUniqueId(),
+    id: "26",
     Icon: BiLogoAws,
     name: "AWS",
   },
   {
-    id: generateUniqueId(),
+    id: "27",
     Icon: IoLogoVercel,
     name: "Vercel",
   },
