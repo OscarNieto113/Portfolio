@@ -64,13 +64,38 @@ const ProjectCard: FunctionComponent<{
           </div>
 
           <div>
-            <h2 className="mb-3 text-xl font-medium md:text-2xl">{nameProject}</h2>
+            <h2 className="mb-3 text-xl font-medium md:text-2xl">
+              {nameProject}
+            </h2>
             <h3 className="mb-3 font-medium">{description}</h3>
-
             <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
-              {languagesAndTools.map((tech) => (
+            {languagesAndTools.map((tech) => (
                 <span
-                  id={(tech.id)}
+                  id={tech.id}
+                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
+                >
+                  {tech.name}
+                </span>
+              ))}
+              {librariesAndFrameworks.map((tech) => (
+                <span
+                  id={tech.id}
+                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
+                >
+                  {tech.name}
+                </span>
+              ))}
+              {databases.map((tech) => (
+                <span
+                  id={tech.id}
+                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
+                >
+                  {tech.name}
+                </span>
+              ))}
+              {others.map((tech) => (
+                <span
+                  id={tech.id}
                   className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
                 >
                   {tech.name}

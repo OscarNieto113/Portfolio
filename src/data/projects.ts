@@ -14,9 +14,9 @@ export interface Project {
   urlDeploy?: string;
   urlGithub: string;
   languagesAndTools: Skill[];
-  librariesAndFrameworks?: Skill[];
-  databases?: Skill[];
-  others?: Skill[];
+  librariesAndFrameworks: Skill[];
+  databases: Skill[];
+  others: Skill[];
   category: Category[];
 }
 
@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     id: generateUniqueId(),
     nameProject: "My Project",
-    imgPath: "/path/to/image.jpg",
+    imgPath: "/images/projects/1.png",
     description: "Description of my project",
     urlDeploy: "https://example.com",
     urlGithub: "https://github.com/myproject",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   {
     id: generateUniqueId(),
     nameProject: "My Project",
-    imgPath: "/path/to/image.jpg",
+    imgPath: "/images/projects/1.png",
     description: "Description of my project",
     urlDeploy: "https://example.com",
     urlGithub: "https://github.com/myproject",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
   {
     id: generateUniqueId(),
     nameProject: "My Project",
-    imgPath: "/path/to/image.jpg",
+    imgPath: "/images/projects/1.png",
     description: "Description of my project",
     urlDeploy: "https://example.com",
     urlGithub: "https://github.com/myproject",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
   {
     id: generateUniqueId(),
     nameProject: "My Project",
-    imgPath: "/path/to/image.jpg",
+    imgPath: "/images/projects/1.png",
     description: "Description of my project",
     urlDeploy: "https://example.com",
     urlGithub: "https://github.com/myproject",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
   {
     id: generateUniqueId(),
     nameProject: "My Project",
-    imgPath: "/path/to/image.jpg",
+    imgPath: "/images/projects/1.png",
     description: "Description of my project",
     urlDeploy: "https://example.com",
     urlGithub: "https://github.com/myproject",
