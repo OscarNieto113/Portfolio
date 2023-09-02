@@ -13,7 +13,6 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Close the dropdown when a filter is selected
   useEffect(() => {
     if (selectedFilters.length > 0) {
       setIsDropdownOpen(false);
@@ -35,9 +34,10 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
         className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring focus:ring-blue-500 active:bg-gray-200"
         aria-expanded={isDropdownOpen}
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+        aria-haspopup="listbox"
+        aria-labelledby="dropdownButton"
       >
         Filter by Category
-        {/* Add an arrow down icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={`w-5 h-5 ml-2 transition-transform transform ${
@@ -55,12 +55,11 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
         </svg>
       </button>
 
-      {/* Dropdown content */}
       {isDropdownOpen && (
         <div
-          className="absolute z-50 w-64 mt-2 origin-top-right bg-white divide-y divide-gray-100 right-50" // Add z-50 to set a higher z-index
-          role="menu"
-          aria-labelledby="dropdownHoverButton"
+          className="absolute z-50 w-64 mt-2 origin-top-right bg-white divide-y divide-gray-100 right-50"
+          role="listbox"
+          aria-labelledby="dropdownButton"
         >
           {categories.map((category) => (
             <div key={category} className="px-4 py-2">
@@ -71,6 +70,7 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
                   value={category}
                   checked={selectedFilters.includes(category)}
                   onChange={() => handleFilterSelection(category)}
+                  aria-label={`Select ${category}`}
                 />
                 <span className="ml-2">{category}</span>
               </label>
@@ -80,6 +80,11 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
       )}
     </div>
   );
+};
+
+FilterDropdown.defaultProps = {
+  categories: [],
+  selectedFilters: [],
 };
 
 export default FilterDropdown;
