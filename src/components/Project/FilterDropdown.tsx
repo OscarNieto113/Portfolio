@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, { FunctionComponent, useState } from "react";
 
 interface FilterDropdownProps {
   categories: string[];
@@ -12,12 +12,6 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
   onSelectFilter,
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  useEffect(() => {
-    if (selectedFilters.length > 0) {
-      setIsDropdownOpen(false);
-    }
-  }, [selectedFilters]);
 
   const handleFilterSelection = (category: string) => {
     const updatedFilters = selectedFilters.includes(category)
