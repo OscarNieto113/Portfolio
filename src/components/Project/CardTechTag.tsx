@@ -1,16 +1,16 @@
 import React, { FunctionComponent } from "react";
+import { Skill } from "../../data/skills";
 
 interface CardTechTagProps {
-  tech: string;
+  tech: Skill;
 }
 
 const CardTechTag: FunctionComponent<CardTechTagProps> = ({ tech }) => {
   return (
     <span
-      key={tech}
       className="px-2 py-1 my-1 bg-gray-200 rounded-sm dark:bg-dark-200"
     >
-      {tech}
+      {tech.name}
     </span>
   );
 };

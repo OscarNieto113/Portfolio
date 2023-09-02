@@ -1,38 +1,32 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent } from "react";
+import { Project } from "@/data/projects";
 import Image from "next/image";
 
 interface ProjectCardImageProps {
-  imgPath: string;
-  nameProject: string;
+  project: Project;
+  showDetail: boolean;
+  toggleDetail: () => void;
 }
 
 const ProjectCardImage: FunctionComponent<ProjectCardImageProps> = ({
-  imgPath,
-  nameProject,
+  project,
+  showDetail,
+  toggleDetail,
 }) => {
-  const [showDetail, setShowDetail] = useState(false);
-
-  const toggleDetail = () => setShowDetail(!showDetail);
-
   const imageProps = {
-    src: imgPath,
-    alt: nameProject,
+    src: project.imgPath,
+    alt: project.nameProject,
     layout: "responsive",
     height: 150,
     width: 300,
   };
 
   return (
-    <div>
-      <Image
-        {...imageProps}
-        className="cursor-pointer"
-        onClick={toggleDetail}
-      />
-      {showDetail && (
-        // Render the details here (moved to ProjectCardDetails component)
-      )}
-    </div>
+    <Image
+      {...imageProps}
+      className={`cursor-pointer ${showDetail ? "opacity-50" : ""}`}
+      onClick={toggleDetail}
+    />
   );
 };
 
