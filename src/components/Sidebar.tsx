@@ -40,7 +40,7 @@ const Sidebar = () => {
       />
 
       {/*Social Media */}
-      <div className="flex justify-around w-9/12 my-5 text-black md:w-full">
+      <div className="flex justify-around w-9/12 my-5 text-Purple md:w-full">
         <SocialMedia
           link={"https://www.linkedin.com/in/oscarnieto113"}
           name={""}
@@ -60,7 +60,7 @@ const Sidebar = () => {
 
       {/*Persona Info */}
       <div
-        className="py-4 my-5 bg-newGray dark:bg-black-500"
+        className="py-4 my-5 text-newGray bg-lightPurple"
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
         <PersoalInformation description="México" icon={GoLocation} />

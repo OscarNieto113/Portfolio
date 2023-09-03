@@ -11,8 +11,8 @@ import {
 
 const Resume = () => {
   return (
-    <div className="mx-4">
-      <div className="grid gap-6 p-4 md:grid-cols-2">
+    <div className="mb-3">
+      <div className="grid gap-6 p-4 mx-4 md:grid-cols-2">
         <Section
           title="Education"
           subTitle="Computer Science"
@@ -22,7 +22,7 @@ const Resume = () => {
         />
         <Section
           title="Work Experience"
-          subTitle="IT System Analys"
+          subTitle="IT System Analyst"
           description="Aeropuerto Internacional Felipe Ángeles"
           date="2023 - 2024"
           iconPath="/icons/aifa.ico"
@@ -32,7 +32,7 @@ const Resume = () => {
         companies={companies}
         subtitle="Companies I've Added Value"
       />
-      <div className="grid gap-6 px-4 md:grid-cols-2">
+      <div className="grid gap-6 px-4 mx-4 md:grid-cols-2">
         <SkillsList skills={languagesAndTools} title="Languages & Tools" />
         <SkillsList
           skills={librariesAndFrameworks}

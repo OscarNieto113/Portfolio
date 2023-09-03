@@ -62,11 +62,7 @@ export const languagesAndTools: Skill[] = [
     Icon: SiVite,
     name: "Vite",
   },
-  {
-    id: "6",
-    Icon: BiLogoNodejs,
-    name: "NodeJS",
-  },
+  
   {
     id: "7",
     Icon: BiLogoPython,
@@ -94,6 +90,11 @@ export const librariesAndFrameworks: Skill[] = [
     id: "11",
     Icon: TbBrandNextjs,
     name: "NextJS",
+  },
+  {
+    id: "6",
+    Icon: BiLogoNodejs,
+    name: "NodeJS",
   },
   {
     id: "12",

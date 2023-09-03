@@ -4,7 +4,7 @@ import { generalSkills } from "../data/generalSkills";
 
 const About: NextPage = () => {
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1 ">
+    <div className="flex flex-col flex-grow px-6 pt-1 mt-3 ">
       <div className="text-base font-medium ">
         <p className="mb-2">
           <span className="text-2xl font-bold text-orange">Hello,</span> I'm

@@ -9,11 +9,14 @@ function MyApp({ Component, pageProps }) {
         <Navbar />
         <Component {...pageProps} />
       </div>
-      <div className="h-full col-span-12 p-4 text-base text-center bg-white dark:bg-dark-500 lg:col-span-3 rounded-2xl shadow-custom-light dark:shadow-custom-dark ">
-        <Sidebar />
+      <div className="col-span-12 lg:col-span-3">
+        <div className="flex flex-col justify-center h-full p-4 text-base text-center bg-newGray dark:bg-dark-500 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
+          <Sidebar />
+        </div>
       </div>
     </div>
   );
 }
 
 export default MyApp;
+

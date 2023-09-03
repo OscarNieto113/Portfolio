@@ -33,7 +33,7 @@ const Section = ({
   return (
     <div className="flex flex-col md:flex-row md:justify-between">
       <div>
-        <h2 className="my-3 text-2xl font-bold">{title}</h2>
+        <h2 className="my-3 text-2xl font-bold text-orange">{title}</h2>
         <div className="flex items-center">
           <div className="mr-2">
             <img src={iconPath} alt="Icon" className="w-8 h-8" />

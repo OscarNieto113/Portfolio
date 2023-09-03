@@ -28,7 +28,7 @@ const DownloadButton = ({
 
   return (
     <a
-      className="flex items-center justify-center px-2 py-1 my-3 rounded-full cursor-pointer bg-newGray focus:outline-none hover:scale-105"
+      className="flex items-center justify-center px-2 py-1 my-3 rounded-full cursor-pointer bg-lightPurple text-newGray focus:outline-none hover:scale-105"
       href={href}
       download={nameDownload}
     >
