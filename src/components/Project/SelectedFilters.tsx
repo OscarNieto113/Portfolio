@@ -11,11 +11,11 @@ const SelectedFilters: FunctionComponent<SelectedFiltersProps> = ({
   handleLabelClick,
 }) => {
   return (
-    <div className="flex flex-wrap justify-center mx-2 my-3">
+    <div className="flex flex-wrap justify-center my-1">
       {selectedFilters.map((filter) => (
         <div
           key={filter}
-          className="flex items-center px-2 py-1 mx-1 my-1 text-sm font-medium rounded-md cursor-pointer bg-orange"
+          className="flex items-center px-2 py-1 mx-1 my-1 text-sm font-medium rounded-md cursor-pointer bg-purple text-newGray"
           onClick={() => handleLabelClick(filter)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {

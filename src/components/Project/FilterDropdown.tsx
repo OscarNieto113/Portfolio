@@ -47,7 +47,7 @@ const FilterDropdown: FunctionComponent<FilterDropdownProps> = ({
       />
       {isDropdownOpen && (
         <div
-          className="absolute z-50 w-64 mt-2 origin-top-right bg-white divide-y divide-gray-100 right-50"
+          className="absolute z-50 mt-2 origin-top-right bg-white divide-y divide-gray-100 w-54 right-50"
           role="listbox"
           aria-labelledby="dropdownButton"
         >
