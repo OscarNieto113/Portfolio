@@ -6,12 +6,12 @@ interface CardTechTagProps {
 }
 
 const CardTechTag: FunctionComponent<CardTechTagProps> = ({ tech }) => {
+  const IconComponent = tech.Icon;
+
   return (
-    <span
-      className="px-2 py-1 my-1 bg-gray-200 rounded-sm dark:bg-dark-200"
-    >
-      {tech.name}
-    </span>
+    <div className="p-3 rounded-full bg-newGray">
+      <IconComponent className="w-5 h-5 cursor-pointer  focus:outline-none hover:scale-125" />
+      </div>
   );
 };
 
