@@ -45,6 +45,7 @@ const Projects = () => {
         key={project.nameProject}
       >
         <ProjectCard project={project} />
+        
       </div>
     ))}
   </div>
