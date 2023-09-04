@@ -10,9 +10,11 @@ const CardTechTag: FunctionComponent<CardTechTagProps> = ({ tech }) => {
 
   return (
     <div className="p-3 rounded-full bg-newGray">
-      <IconComponent className="w-5 h-5 cursor-pointer  focus:outline-none hover:scale-125" />
+      <IconComponent className="w-5 h-5 cursor-pointer focus:outline-none hover:scale-125" />
       </div>
   );
 };
 
 export default CardTechTag;
+
+
