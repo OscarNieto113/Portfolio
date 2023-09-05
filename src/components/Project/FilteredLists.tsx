@@ -6,6 +6,7 @@ interface FilterListProps {
   handleFilterSelection: (category: string) => void;
 }
 
+
 const FilterList: FunctionComponent<FilterListProps> = ({
   categories,
   selectedFilters,
