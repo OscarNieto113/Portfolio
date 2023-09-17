@@ -10,7 +10,6 @@ import {
   CardBody,
   CardFooter,
   Button,
-  Tooltip,
 } from "@material-tailwind/react";
 
 interface ProjectCardProps {
@@ -21,14 +20,15 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
   const [showDetail, setShowDetail] = useState(false);
 
   const toggleDetail = () => setShowDetail(!showDetail);
-  const allSkills = project.languagesAndTools.concat(
-    project.librariesAndFrameworks,
-    project.databases,
-    project.others
-  );
+  const allSkills  = new Set([
+    ...project.languagesAndTools,
+    ...project.librariesAndFrameworks,
+    ...project.databases,
+    ...project.others,
+  ]);
 
   return (
-    <Card className="w-full max-w-[26rem] shadow-lg">
+    <Card key={project.id} className="w-full max-w-[26rem] shadow-lg">
       <CardHeader floated={false} color="blue-gray">
         <img src={project.imgPath} alt={project.nameProject} />
         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
