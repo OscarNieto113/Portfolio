@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
+  content: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
   darkMode: "class",
   theme: {
     extend: {
@@ -13,6 +13,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        newGray: {
+          DEFAULT: '#e1e1eb'
+        },
         orange: {
           DEFAULT: '#CFA616'
         },
@@ -22,9 +25,7 @@ module.exports = {
         lightPurple: {
           DEFAULT: '#6B6C86'
         },
-        newGray: {
-          DEFAULT: '#ECEEFF'
-        }
+        
       }
     }
   },
