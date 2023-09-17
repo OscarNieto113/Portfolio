@@ -51,7 +51,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
             <Button
               size="lg"
               fullWidth={true}
-              className="bg-lightPurple text-newGray"
+              className="cursor-pointer bg-lightPurple text-newGray focus:outline-none hover:scale-110"
               onClick={toggleDetail} // Agregar el evento onClick
             >
               View Details

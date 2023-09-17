@@ -8,6 +8,7 @@ interface CardTechTagProps {
 const CardTechTag: FunctionComponent<CardTechTagProps> = ({ techs }) => {
   const techsArray = Array.from(techs);
   const displayedTechs = techsArray.slice(0, 4);
+  const showMore = techsArray.length > 4;
 
   return (
     <div className="inline-flex flex-wrap items-center gap-2 mx-2 my-2 group">
@@ -17,7 +18,7 @@ const CardTechTag: FunctionComponent<CardTechTagProps> = ({ techs }) => {
             {tech.Icon && <tech.Icon className="w-6 h-6" />}{" "}
           </div>
         ))}
-        {techsArray.length > 4 && (
+        {showMore && (
           <div className="p-1 rounded-full bg-newGray">
             +{techsArray.length - 4} more
           </div>
