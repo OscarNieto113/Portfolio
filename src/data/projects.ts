@@ -78,21 +78,62 @@ export const projects: Project[] = [
   {
     id: generateUniqueId(),
     nameProject: "Kiara Bienes Raices",
-    imgPath: "/images/projects/1.png",
+    imgPath: "/images/projects/KIARA.png",
     description: "Description of my project",
-    urlDeploy: "https://example.com",
-    urlGithub: "https://github.com/OscarNieto113/Kiara-Bienes-Raices",
+    urlDeploy: "https://casaenqueretaro.com.mx",
+    urlGithub: "https://github.com/Genesis-Solutions/Kiara-Bienes-Raices",
     languagesAndTools: new Set([
-      { id: "1", Icon: AiFillHtml5, name: "HTML" },
-      { id: "3", Icon: BiLogoJavascript, name: "Javascript" },
+      {
+        id: "1",
+        Icon: AiFillHtml5,
+        name: "HTML",
+      },
+      {
+        id: "2",
+        Icon: BiLogoCss3,
+        name: "CSS",
+      },
+      {
+        id: "3",
+        Icon: BiLogoJavascript,
+        name: "Javascript",
+      },
     ]),
     librariesAndFrameworks: new Set([
-      { id: "10", Icon: TbBrandNextjs, name: "React" },
+      {
+        id: "6",
+        Icon: BiLogoNodejs,
+        name: "NodeJS",
+      },
+      {
+        id: "12",
+        Icon: BiLogoTailwindCss,
+        name: "Tailwind",
+      },
+      {
+        id: "14",
+        Icon: BiLogoJquery,
+        name: "Jquery",
+      },
     ]),
-    databases: new Set([{ id: "4", Icon: TbBrandNextjs, name: "MongoDB" }]),
+    databases: new Set([
+      {
+        id: "17",
+        Icon: GrMysql,
+        name: "MySQL",
+      },
+    ]),
     others: new Set([
-      { id: "5", Icon: TbBrandNextjs, name: "Redux" },
-      { id: "6", Icon: TbBrandNextjs, name: "Node.js" },
+      {
+        id: "20",
+        Icon: BsGit,
+        name: "Git",
+      },
+      {
+        id: "26",
+        Icon: BiLogoAws,
+        name: "AWS",
+      },
     ]),
     category: ["Project Management"],
   },

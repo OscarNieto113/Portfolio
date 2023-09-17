@@ -71,7 +71,6 @@ const Sidebar = () => {
         onClick={() => {}}
         className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-purple"
       >
-        {/* //TODO remove bg black */}
         Change Theme
       </button>
     </div>

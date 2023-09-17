@@ -55,18 +55,17 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
               onClick={toggleDetail} // Agregar el evento onClick
             >
               View Details
-             
             </Button>
           </div>
         </CardFooter>
       </Card>
       {showDetail && (
-                <ProjectCardDetails
-                  project={project}
-                  toggleDetail={toggleDetail}
-                  techs={allSkills}
-                />
-              )}
+        <ProjectCardDetails
+          project={project}
+          toggleDetail={toggleDetail}
+          techs={allSkills}
+        />
+      )}
     </>
   );
 };

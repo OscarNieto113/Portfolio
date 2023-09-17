@@ -4,7 +4,8 @@ import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import Image from "next/image";
 import { Skill } from "@/data/skills";
-import SkillsList from "../SkillList";
+import SkillsList from "@/components/SkillList";
+import UrlButton from "@/components/UrlButton";
 
 interface ProjectCardDetailsProps {
   project: Project;
@@ -12,12 +13,22 @@ interface ProjectCardDetailsProps {
   techs: Set<Skill>;
 }
 
+const getCategoryBadge = (category: string, index: number) => (
+  <span
+    key={index} // Use the index as a unique key
+    className="inline-block px-2 py-1 mr-2 text-white rounded-md bg-purple"
+  >
+    {category}
+  </span>
+);
+
 const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
   project,
   toggleDetail,
   techs,
 }) => {
   const techsArray = Array.from(techs);
+
   return (
     <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 rounded-md bg-newGray text-purple md:grid-cols-2 gap-x-12 dark:text-newGray dark:bg-dark-100">
       <div>
@@ -29,23 +40,22 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
           width={300}
           className="rounded-md"
         />
+
         <div className="flex justify-center my-4 space-x-3">
-          <a
+          <UrlButton
             href={project.urlGithub}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-md cursor-pointer dark:bg-dark-200 focus:outline-none hover:scale-110"
-          >
-            <AiFillGithub /> <span>Github</span>
-          </a>
-          <a
-            href={project.urlDeploy}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-md cursor-pointer dark:bg-dark-200 focus:outline-none hover:scale-110"
-          >
-            <AiFillProject /> <span>Live Project</span>
-          </a>
+            label="Github"
+            ariaLabel={`GitHub link for ${project.nameProject}`}
+            icon={AiFillGithub}
+          />
+          {project.urlDeploy && (
+            <UrlButton
+              href={project.urlDeploy}
+              label="Live Project"
+              ariaLabel={`Live project link for ${project.nameProject}`}
+              icon={AiFillProject}
+            />
+          )}
         </div>
       </div>
 
@@ -56,7 +66,16 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
         <h3 className="mb-3 font-medium">{project.description}</h3>
 
         <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
-        <SkillsList skills={techsArray} title="Technologies used in the Project" />
+          <SkillsList
+            skills={techsArray}
+            title="Technologies used in this Project"
+          />
+        </div>
+
+        <div className="mb-3">
+          {project.category.map((category, index) =>
+            getCategoryBadge(category, index)
+          )}
         </div>
       </div>
 
@@ -64,7 +83,7 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
         onClick={toggleDetail}
         className="absolute p-1 bg-white rounded-full cursor-pointer top-3 right-3 focus:outline-none dark:bg-orange hover:scale-125"
       >
-        <MdClose size={30}  />
+        <MdClose size={30} />
       </button>
     </div>
   );
