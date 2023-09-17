@@ -4,22 +4,20 @@ import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import CardTechTag from "./CardTechTag";
 import Image from "next/image";
+import { Skill } from "@/data/skills";
 
 interface ProjectCardDetailsProps {
   project: Project;
   toggleDetail: () => void;
+  techs: Set<Skill>;
 }
 
 const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
   project,
   toggleDetail,
+  techs,
 }) => {
-  const renderTechTags = (techList: string[]) => {
-    return techList.map((tech) => (
-      <CardTechTag key={tech} tech={tech} />
-    ));
-  };
-
+  const techsArray = Array.from(techs);
   return (
     <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
       <div>
@@ -51,11 +49,17 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
           {project.nameProject}
         </h2>
         <h3 className="mb-3 font-medium">{project.description}</h3>
+
         <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
-          {renderTechTags(project.languagesAndTools)}
-          {renderTechTags(project.librariesAndFrameworks)}
-          {renderTechTags(project.databases)}
-          {renderTechTags(project.others)}
+          <div className="inline-flex flex-wrap items-center gap-2 mx-2 my-2 group">
+            <div className="flex gap-1">
+              {techsArray.map((tech) => (
+                <div key={tech.id} className="p-1 rounded-full bg-newGray">
+                  {tech.Icon && <tech.Icon className="w-6 h-6" />}{" "}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
