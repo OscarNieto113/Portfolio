@@ -1,9 +1,34 @@
 import { Skill } from "../data/skills";
-import { TbBrandNextjs } from "react-icons/tb";
 import { generalSkills } from "./generalSkills";
-import { SiTypescript, SiVite } from "react-icons/si";
-import { BiLogoReact, BiLogoTailwindCss } from "react-icons/bi";
-import { BsGit } from "react-icons/bs";
+import { AiFillHtml5 } from "react-icons/ai";
+import {
+  BiLogoAws,
+  BiLogoCPlusPlus,
+  BiLogoCss3,
+  BiLogoFirebase,
+  BiLogoGoogleCloud,
+  BiLogoJavascript,
+  BiLogoJquery,
+  BiLogoMongodb,
+  BiLogoNodejs,
+  BiLogoPython,
+  BiLogoReact,
+  BiLogoTailwindCss,
+} from "react-icons/bi";
+import { BsFillBootstrapFill, BsGit } from "react-icons/bs";
+import {
+  SiKeras,
+  SiKotlin,
+  SiProxmox,
+  SiTensorflow,
+  SiTruenas,
+  SiTypescript,
+  SiVite,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { GrMysql } from "react-icons/gr";
+import { FaCloudflare } from "react-icons/fa";
+import { SiUbiquiti } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 
 function generateUniqueId(): string {
@@ -34,8 +59,7 @@ export const projects: Project[] = [
     urlDeploy: "https://oscarnietoespitia.tech",
     urlGithub: "https://github.com/OscarNieto113/Portfolio",
     languagesAndTools: [
-      { id: "1", Icon: TbBrandNextjs, name: "HTML" },
-      { id: "2", Icon: TbBrandNextjs, name: "CSS" },
+      { id: "1", Icon: AiFillHtml5, name: "HTML" },
       { id: "4", Icon: SiTypescript, name: "Typescript" },
       { id: "5", Icon: SiVite, name: "Vite" },
     ],
@@ -59,8 +83,8 @@ export const projects: Project[] = [
     urlDeploy: "https://example.com",
     urlGithub: "https://github.com/OscarNieto113/Kiara-Bienes-Raices",
     languagesAndTools: [
-      { id: "1", Icon: TbBrandNextjs, name: "HTML" },
-      { id: "2", Icon: TbBrandNextjs, name: "CSS" },
+      { id: "1", Icon: AiFillHtml5, name: "HTML" },
+      { id: "3", Icon: BiLogoJavascript, name: "Javascript" },
     ],
     librariesAndFrameworks: [{ id: "3", Icon: TbBrandNextjs, name: "React" }],
     databases: [{ id: "4", Icon: TbBrandNextjs, name: "MongoDB" }],
