@@ -30,7 +30,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
 
   return (
     <>
-      <Card key={project.id} className="w-full max-w-[26rem] shadow-lg">
+      <Card key={project.id} className="w-full max-w-[26rem] shadow-lg ">
         <CardHeader floated={false} color="blue-gray">
           <img src={project.imgPath} alt={project.nameProject} />
           <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60 " />

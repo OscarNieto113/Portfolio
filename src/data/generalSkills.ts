@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 import { AiFillCode, AiFillDatabase, AiFillProject } from "react-icons/ai";
-import { BiSolidServer } from "react-icons/bi";
+import { BiSolidNetworkChart, BiSolidServer } from "react-icons/bi";
 import { BsHddNetworkFill, BsWindowFullscreen } from "react-icons/bs";
 
 export interface GeneralSkill {
@@ -52,5 +52,12 @@ export const generalSkills: GeneralSkill[] = [
     title: "Networking",
     about:
       "Gained proficiency in network protocols, configurations, and security by experimenting with my <b>Homelab Server</b>. Currently using <b>Ubiquiti</b> gear.",
+  },
+  {
+    id: "7",
+    Icon: BiSolidNetworkChart,
+    title: "Artificial Intelligence",
+    about:
+      "My passion lies in AI, where I've explored machine learning, data analysis, and neural networks. I've leveraged AI to develop intelligent solutions capable of adapting and evolving.",
   },
 ];

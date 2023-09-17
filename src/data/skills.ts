@@ -5,6 +5,7 @@ import {
   BiLogoCPlusPlus,
   BiLogoCss3,
   BiLogoFirebase,
+  BiLogoFlask,
   BiLogoGoogleCloud,
   BiLogoJavascript,
   BiLogoJquery,
@@ -16,9 +17,11 @@ import {
 } from "react-icons/bi";
 import { BsFillBootstrapFill, BsGit } from "react-icons/bs";
 import {
+  SiJupyter,
   SiKeras,
   SiKotlin,
   SiProxmox,
+  SiScikitlearn,
   SiTensorflow,
   SiTruenas,
   SiTypescript,
@@ -26,7 +29,7 @@ import {
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
-import { FaCloudflare } from "react-icons/fa";
+import { FaCloudflare, FaFlask } from "react-icons/fa";
 import { SiUbiquiti } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 
@@ -78,6 +81,11 @@ export const languagesAndTools: Skill[] = [
     Icon: SiKotlin,
     name: "Kotlin",
   },
+  {
+    id: "29",
+    Icon: SiJupyter,
+    name: "Jupyter Notebook",
+  },
 ];
 
 export const librariesAndFrameworks: Skill[] = [
@@ -120,6 +128,16 @@ export const librariesAndFrameworks: Skill[] = [
     id: "16",
     Icon: SiKeras,
     name: "Keras",
+  },
+  {
+    id: "28",
+    Icon: SiScikitlearn,
+    name: "Keras",
+  },
+  {
+    id: "28",
+    Icon: BiLogoFlask,
+    name: "Flask",
   },
 ];
 

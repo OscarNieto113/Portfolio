@@ -6,6 +6,7 @@ import {
   BiLogoCPlusPlus,
   BiLogoCss3,
   BiLogoFirebase,
+  BiLogoFlask,
   BiLogoGoogleCloud,
   BiLogoJavascript,
   BiLogoJquery,
@@ -17,9 +18,11 @@ import {
 } from "react-icons/bi";
 import { BsFillBootstrapFill, BsGit } from "react-icons/bs";
 import {
+  SiJupyter,
   SiKeras,
   SiKotlin,
   SiProxmox,
+  SiScikitlearn,
   SiTensorflow,
   SiTruenas,
   SiTypescript,
@@ -27,7 +30,7 @@ import {
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
-import { FaCloudflare } from "react-icons/fa";
+import { FaCloudflare, FaFlask } from "react-icons/fa";
 import { SiUbiquiti } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 
@@ -135,7 +138,164 @@ export const projects: Project[] = [
         name: "AWS",
       },
     ]),
-    category: ["Project Management"],
+    category: [
+      "Project Management",
+      "Backend Development",
+      "Frontend Development",
+    ],
+  },
+  {
+    id: generateUniqueId(),
+    nameProject: "Gomez Morin",
+    imgPath: "/images/projects/GOMEZ.png",
+    description: "Description of my project",
+    urlDeploy: "https://eventos-ceceq.com/",
+    urlGithub: "https://github.com/Genesis-Solutions/Gomez-Morin-Frontend",
+    languagesAndTools: new Set([
+      {
+        id: "1",
+        Icon: AiFillHtml5,
+        name: "HTML",
+      },
+      {
+        id: "2",
+        Icon: BiLogoCss3,
+        name: "CSS",
+      },
+      {
+        id: "3",
+        Icon: BiLogoJavascript,
+        name: "Javascript",
+      },
+      {
+        id: "5",
+        Icon: SiVite,
+        name: "Vite",
+      },
+    ]),
+    librariesAndFrameworks: new Set([
+      {
+        id: "10",
+        Icon: BiLogoReact,
+        name: "React",
+      },
+      {
+        id: "6",
+        Icon: BiLogoNodejs,
+        name: "NodeJS",
+      },
+      {
+        id: "12",
+        Icon: BiLogoTailwindCss,
+        name: "Tailwind",
+      },
+    ]),
+    databases: new Set([
+      {
+        id: "18",
+        Icon: BiLogoMongodb,
+        name: "MongoDB",
+      },
+    ]),
+    others: new Set([
+      {
+        id: "20",
+        Icon: BsGit,
+        name: "Git",
+      },
+      {
+        id: "26",
+        Icon: BiLogoAws,
+        name: "AWS",
+      },
+    ]),
+    category: [
+      "Project Management",
+      "Backend Development",
+      "Frontend Development",
+    ],
+  },
+  {
+    id: generateUniqueId(),
+    nameProject: "Store Sales Forecasting",
+    imgPath: "/images/projects/STORESALES.png",
+    description: "Description of my project",
+    urlDeploy: "",
+    urlGithub: "https://github.com/FlavioRr/StoreSalesForecastingTC3006C",
+    languagesAndTools: new Set([
+      {
+        id: "1",
+        Icon: AiFillHtml5,
+        name: "HTML",
+      },
+      {
+        id: "3",
+        Icon: BiLogoJavascript,
+        name: "Javascript",
+      },
+      {
+        id: "5",
+        Icon: SiVite,
+        name: "Vite",
+      },
+      {
+        id: "7",
+        Icon: BiLogoPython,
+        name: "Python",
+      },
+      {
+        id: "29",
+        Icon: SiJupyter,
+        name: "Jupyter Notebook",
+      },
+    ]),
+    librariesAndFrameworks: new Set([
+      {
+        id: "10",
+        Icon: BiLogoReact,
+        name: "React",
+      },
+      {
+        id: "6",
+        Icon: BiLogoNodejs,
+        name: "NodeJS",
+      },
+      {
+        id: "12",
+        Icon: BiLogoTailwindCss,
+        name: "Tailwind",
+      },
+      {
+        id: "28",
+        Icon: SiScikitlearn,
+        name: "Keras",
+      },
+      {
+        id: "28",
+        Icon: BiLogoFlask,
+        name: "Flask",
+      },
+    ]),
+    databases: new Set([
+      
+    ]),
+    others: new Set([
+      {
+        id: "20",
+        Icon: BsGit,
+        name: "Git",
+      },
+      {
+        id: "26",
+        Icon: BiLogoAws,
+        name: "AWS",
+      },
+    ]),
+    category: [
+      "Backend Development",
+      "Frontend Development",
+      "Artificial Intelligence",
+    ],
   },
 ];
 

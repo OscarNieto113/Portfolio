@@ -11,7 +11,7 @@ import {
 
 const Resume = () => {
   return (
-    <div className="mb-3">
+    <div className="overflow-y-scroll" style={{ height: "80vh" }}>
       <div className="grid gap-6 p-4 mx-4 md:grid-cols-2">
         <Section
           title="Education"

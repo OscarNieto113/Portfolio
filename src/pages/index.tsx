@@ -3,8 +3,8 @@ import GeneralSkill from "../components/GeneralSkillCard";
 import { generalSkills } from "../data/generalSkills";
 
 const About: NextPage = () => {
-  return (
-    <div className="flex flex-col flex-grow px-6 pt-1 mt-3 ">
+  return ( 
+    <div className="flex flex-col flex-grow px-6 pt-1 mt-3 overflow-y-scroll" style={{ height: "80vh" }}>
       <div className="text-base font-medium ">
         <p className="mb-2">
           <span className="text-2xl font-bold text-orange">Hello,</span> I'm

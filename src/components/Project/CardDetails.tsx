@@ -15,7 +15,7 @@ interface ProjectCardDetailsProps {
 
 const getCategoryBadge = (category: string, index: number) => (
   <span
-    key={index} // Use the index as a unique key
+    key={index}
     className="inline-block px-2 py-1 mr-2 text-white rounded-md bg-purple"
   >
     {category}
@@ -72,10 +72,12 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
           />
         </div>
 
-        <div className="mb-3">
-          {project.category.map((category, index) =>
-            getCategoryBadge(category, index)
-          )}
+        <div className="flex flex-wrap justify-end mt-5 space-x-2 text-sm tracking-wider">
+          <div className="mb-3">
+            {project.category.map((category, index) =>
+              getCategoryBadge(category, index)
+            )}
+          </div>
         </div>
       </div>
 
