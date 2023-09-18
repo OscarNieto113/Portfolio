@@ -7,7 +7,6 @@ const navItems = [
   { name: "Resume", route: "/resume" },
   { name: "Projects", route: "/projects" },
   { name: "Contact Me", route: "/contact" },
-  { name: "Feedback", route: "/feedback" },
 ];
 
 /**

@@ -11,7 +11,7 @@ import {
 
 const Resume = () => {
   return (
-    <div className="overflow-y-scroll" style={{ height: "80vh" }}>
+    <div>
       <div className="grid gap-6 p-4 mx-4 md:grid-cols-2">
         <Section
           title="Education"
@@ -32,7 +32,7 @@ const Resume = () => {
         companies={companies}
         subtitle="Companies I've Added Value"
       />
-      <div className="grid gap-6 px-4 mx-4 md:grid-cols-2">
+      <div className="grid gap-6 px-4 py-4 mx-4 md:grid-cols-2">
         <SkillsList skills={languagesAndTools} title="Languages & Tools" />
         <SkillsList
           skills={librariesAndFrameworks}
