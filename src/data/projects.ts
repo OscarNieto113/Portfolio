@@ -33,6 +33,7 @@ import { GrMysql } from "react-icons/gr";
 import { FaCloudflare, FaFlask } from "react-icons/fa";
 import { SiUbiquiti } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
+import { RiNotionFill } from "react-icons/ri";
 
 function generateUniqueId(): string {
   return Math.random().toString(36).substr(2, 9);
@@ -276,9 +277,7 @@ export const projects: Project[] = [
         name: "Flask",
       },
     ]),
-    databases: new Set([
-      
-    ]),
+    databases: new Set([]),
     others: new Set([
       {
         id: "20",
@@ -295,6 +294,117 @@ export const projects: Project[] = [
       "Backend Development",
       "Frontend Development",
       "Artificial Intelligence",
+    ],
+  },
+  {
+    id: generateUniqueId(),
+    nameProject: "Genesis",
+    imgPath: "/images/projects/GENESIS.png",
+    description: "Description of my project",
+    urlDeploy: "",
+    urlGithub:
+      "https://andrewisabeast.notion.site/G-nesis-e66594d87d41464dacb036ab7322e908?pvs=4",
+    languagesAndTools: new Set([]),
+    librariesAndFrameworks: new Set([]),
+    databases: new Set([]),
+    others: new Set([
+      {
+        id: "30",
+        Icon: RiNotionFill,
+        name: "Notion",
+      },
+    ]),
+    category: ["Project Management"],
+  },
+  {
+    id: generateUniqueId(),
+    nameProject: "Atemporal",
+    imgPath: "/images/projects/ATEMPORAL.png",
+    description: "Description of my project",
+    urlDeploy: "",
+    urlGithub: "https://github.com/Mike5801/AppAtemporal",
+    languagesAndTools: new Set([
+      {
+        id: "9",
+        Icon: SiKotlin,
+        name: "Kotlin",
+      },
+    ]),
+    librariesAndFrameworks: new Set([
+      {
+        id: "19",
+        Icon: BiLogoFirebase,
+        name: "Firebase",
+      },
+    ]),
+    databases: new Set([]),
+    others: new Set([
+      {
+        id: "20",
+        Icon: BsGit,
+        name: "Git",
+      },
+    ]),
+    category: ["Backend Development", "Frontend Development"],
+  },
+  {
+    id: generateUniqueId(),
+    nameProject: "Data Logic Code",
+    imgPath: "/images/projects/DLC.png",
+    description: "Description of my project",
+    urlDeploy: "https://dlc-itesm.uc.r.appspot.com/users/login",
+    urlGithub: "https://github.com/OscarNieto113/DLC",
+    languagesAndTools: new Set([
+      {
+        id: "1",
+        Icon: AiFillHtml5,
+        name: "HTML",
+      },
+      {
+        id: "2",
+        Icon: BiLogoCss3,
+        name: "CSS",
+      },
+      {
+        id: "3",
+        Icon: BiLogoJavascript,
+        name: "Javascript",
+      }
+    ]),
+    librariesAndFrameworks: new Set([
+      {
+        id: "13",
+        Icon: BsFillBootstrapFill,
+        name: "Bootstrap",
+      },
+      {
+        id: "14",
+        Icon: BiLogoJquery,
+        name: "Jquery",
+      },
+    ]),
+    databases: new Set([
+      {
+        id: "17",
+        Icon: GrMysql,
+        name: "MySQL",
+      },
+    ]),
+    others: new Set([
+      {
+        id: "20",
+        Icon: BsGit,
+        name: "Git",
+      },
+      {
+        id: "25",
+        Icon: BiLogoGoogleCloud,
+        name: "GCP",
+      },
+    ]),
+    category: [
+      "Backend Development",
+      "Frontend Development",
     ],
   },
 ];

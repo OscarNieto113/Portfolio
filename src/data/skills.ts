@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { RiNotionFill }from "react-icons/ri";
 import { AiFillHtml5 } from "react-icons/ai";
 import {
   BiLogoAws,
@@ -199,5 +200,10 @@ export const others: Skill[] = [
     id: "27",
     Icon: IoLogoVercel,
     name: "Vercel",
+  },
+  {
+    id: "30",
+    Icon: RiNotionFill,
+    name: "Notion",
   },
 ];
