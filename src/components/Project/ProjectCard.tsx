@@ -1,8 +1,9 @@
 import React, { FunctionComponent, useState } from "react";
 import CardTechTag from "./CardTechTag";
 import ProjectCardDetails from "./CardDetails";
-import { Project } from "@/data/projects";
 import CardCategoryTag from "./CardCategoryType";
+import { Project } from "@/data/projects";
+import Modal from "@/components/Modal";
 
 import {
   Card,
@@ -52,20 +53,21 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
               size="lg"
               fullWidth={true}
               className="cursor-pointer bg-lightPurple text-newGray focus:outline-none hover:scale-110"
-              onClick={toggleDetail} // Agregar el evento onClick
+              onClick={toggleDetail}
             >
               View Details
             </Button>
           </div>
         </CardFooter>
       </Card>
-      {showDetail && (
+
+      <Modal isOpen={showDetail} onClose={toggleDetail}>
         <ProjectCardDetails
           project={project}
           toggleDetail={toggleDetail}
           techs={allSkills}
         />
-      )}
+      </Modal>
     </>
   );
 };

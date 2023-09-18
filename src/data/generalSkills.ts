@@ -58,6 +58,6 @@ export const generalSkills: GeneralSkill[] = [
     Icon: BiSolidNetworkChart,
     title: "Artificial Intelligence",
     about:
-      "My passion lies in AI, where I've explored machine learning, data analysis, and neural networks. I've leveraged AI to develop intelligent solutions capable of adapting and evolving.",
+      "Currently learning AI. I've explored machine learning, data analysis, and neural networks.",
   },
 ];

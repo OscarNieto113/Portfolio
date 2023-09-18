@@ -16,7 +16,7 @@ interface ProjectCardDetailsProps {
 const getCategoryBadge = (category: string, index: number) => (
   <span
     key={index}
-    className="inline-block px-2 py-1 mr-2 text-white rounded-md bg-purple"
+    className="inline-block px-2 py-1 my-1 mr-2 text-white rounded-md bg-purple"
   >
     {category}
   </span>
@@ -30,8 +30,8 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
   const techsArray = Array.from(techs);
 
   return (
-    <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 rounded-md bg-newGray text-purple md:grid-cols-2 gap-x-12 dark:text-newGray dark:bg-dark-100">
-      <div>
+    <div className="absolute top-0 left-0 z-10 grid w-full h-full rounded-md bg-newGray text-purple md:grid-cols-2 gap-x-12 dark:text-newGray dark:bg-dark-100">
+      <div className="flex flex-col items-center justify-center p-5 bg-newGray">
         <Image
           src={project.imgPath}
           alt={project.nameProject}
@@ -59,7 +59,7 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
         </div>
       </div>
 
-      <div>
+      <div className="flex flex-col items-center justify-center p-5 bg-newGray">
         <h2 className="mb-3 text-xl font-medium md:text-2xl text-orange">
           {project.nameProject}
         </h2>

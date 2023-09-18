@@ -268,7 +268,7 @@ export const projects: Project[] = [
       {
         id: "28",
         Icon: SiScikitlearn,
-        name: "Keras",
+        name: "ScikitLearn",
       },
       {
         id: "28",
