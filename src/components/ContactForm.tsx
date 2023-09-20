@@ -1,9 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
 export interface MyFormData {
-  name: string;
-  email: string;
-  message: string;
+  subject: string;
+  text: string;
 }
 
 function ContactForm({
@@ -12,9 +11,8 @@ function ContactForm({
   onSubmit: (formData: MyFormData) => void;
 }) {
   const [formData, setFormData] = useState<MyFormData>({
-    name: "",
-    email: "",
-    message: "",
+    subject: "",
+    text: "",
   });
 
   const handleChange = (
@@ -26,39 +24,28 @@ function ContactForm({
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    onSubmit(formData); // Call the provided onSubmit function with the formData
+    onSubmit(formData);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="subject">Subject:</label>
         <input
           type="text"
-          id="name"
-          name="name"
-          value={formData.name}
+          id="subject"
+          name="subject"
+          value={formData.subject}
           onChange={handleChange}
           required
         />
       </div>
       <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
+        <label htmlFor="text">Text:</label>
         <textarea
-          id="message"
-          name="message"
-          value={formData.message}
+          id="text"
+          name="text"
+          value={formData.text}
           onChange={handleChange}
           required
         />

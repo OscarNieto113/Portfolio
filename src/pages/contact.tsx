@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import ContactForm, { MyFormData } from '@/components/ContactForm';
-function ContactPage() {
-  const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
+import { ChangeEvent, FormEvent, useState } from "react";
+import ContactForm, { MyFormData } from "@/components/ContactForm";
+
+function Contact() {
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
   const handleFormSubmit = async (formData: MyFormData) => {
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/contact', { // Use the API route /api/contact
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +25,7 @@ function ContactPage() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col flex-grow px-6 pt-1 mt-3 overflow-y-scroll" style={{ height: "80vh" }}>
       {isEmailSent ? (
         <p>Email sent successfully!</p>
       ) : (
@@ -34,4 +35,4 @@ function ContactPage() {
   );
 }
 
-export default ContactPage;
+export default Contact;
