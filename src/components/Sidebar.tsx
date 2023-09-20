@@ -67,12 +67,13 @@ const Sidebar = () => {
         <PersoalInformation description="onietoespitia2@gmail.com" icon={AiOutlineMail} />
         <PersoalInformation description="+52 (462) 148 6009" icon={AiOutlinePhone} />
       </div>
+      {/*Persona Info 
       <button
         onClick={() => {}}
         className="w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 bg-purple"
       >
         Change Theme
-      </button>
+      </button>*/}
     </div>
   );
 };
