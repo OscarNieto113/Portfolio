@@ -2,6 +2,7 @@ import { NextComponentType } from 'next';
 import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
+import { Analytics } from '@vercel/analytics/react';
 
 interface MyAppProps {
   Component: NextComponentType;
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }: MyAppProps ) {
       <div className="flex flex-col col-span-12 overflow-hidden bg-white shadow-custom-light dark:shadow-custom-dark rounded-2xl lg:col-span-9 dark:bg-dark-500">
         <Navbar />
         <Component {...pageProps} />
+        <Analytics />
       </div>
       <div className="col-span-12 lg:col-span-3">
         <div className="flex flex-col justify-center h-full p-4 text-base text-center bg-newGray dark:bg-dark-500 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
