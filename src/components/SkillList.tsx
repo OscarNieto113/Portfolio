@@ -20,9 +20,9 @@ interface SkillsListProps {
 
 const SkillsList: React.FC<SkillsListProps> = ({ skills, title }) => {
   return (
-    <div className="text-center"> {/* Center the content */}
+    <div className="text-center">
       <h3 className="mt-3 text-xl font-bold">{title}</h3>
-      <div className="flex flex-wrap justify-center"> {/* Center the cards horizontally */}
+      <div className="flex flex-wrap justify-center">
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />
         ))}

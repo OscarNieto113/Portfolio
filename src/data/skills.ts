@@ -136,7 +136,7 @@ export const librariesAndFrameworks: Skill[] = [
     name: "Keras",
   },
   {
-    id: "28",
+    id: "31",
     Icon: BiLogoFlask,
     name: "Flask",
   },

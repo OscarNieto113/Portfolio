@@ -44,7 +44,7 @@ const CompanyCarrousel: React.FC<Props> = ({
   );
 
   return (
-    <div className="px-5 py-3 mx-auto rounded-lg bg-newGray embla">
+    <div className="w-full px-5 py-3 mx-auto rounded-lg bg-newGray embla">
       {subtitle && (
         <h2 className="my-3 text-2xl font-bold text-center">{subtitle}</h2>
       )}
