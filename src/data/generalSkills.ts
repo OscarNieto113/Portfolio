@@ -13,51 +13,58 @@ export interface GeneralSkill {
 export const generalSkills: GeneralSkill[] = [
   {
     id: "1",
-    Icon: AiFillProject,
-    title: "Project Management",
+    Icon: AiFillDatabase,
+    title: "Data Engineering",
     about:
-      "Proficient in guiding <b>cross-functional teams</b>, I ensure the efficient achievement of <b>project timelines</b> and <b>objectives</b> by implementing <b>CMMI</b> practices.",
+      "Designing and maintaining <b>data pipelines</b> to ensure reliable <b>collection, transformation, and storage</b> of information. Experienced with <b>ETL processes</b>, <b>databases</b>, and <b>data modeling</b> to enable analytics and decision-making.",
   },
   {
     id: "2",
-    Icon: BsWindowFullscreen,
-    title: "Frontend Development",
+    Icon: BiSolidServer,
+    title: "Infrastructure Engineering",
     about:
-      "Building user-friendly interfaces by utilizing <b>HTML</b>, <b>Tailwind</b>, and <b>React</b>. Transforming design concepts into functional.",
+      "Designing and managing <b>server environments</b> with <b>Proxmox</b>, <b>TrueNAS</b>, <b>Kubernetes</b>, <b>Docker</b>, and <b>Cloudflare</b>. Focused on <b>performance</b>, <b>reliability</b>, and <b>scalability</b> in distributed systems.",
   },
   {
     id: "3",
-    Icon: AiFillDatabase,
-    title: "Backend Development",
+    Icon: BsHddNetworkFill,
+    title: "Network Engineering",
     about:
-      "Constructing robust <b>server-side</b> applications using technologies like <b>Node.js</b> and <b>Python</b>, ensuring optimal data handling and functionality.",
+      "Configuring and securing <b>network infrastructures</b> with <b>Ubiquiti</b> gear, building expertise in <b>protocols</b>, <b>routing</b>, <b>network optimization</b>, and <b>security</b> best practices.",
   },
   {
     id: "4",
-    Icon: AiFillCode,
-    title: "Competitive Coder",
+    Icon: AiFillProject,
+    title: "Project Management",
     about:
-      "Avid competitive coder, with a focus on platforms like LeetCode. Consistently writing <b>step-by-step</b> solutions.",
+      "Experienced in leading <b>cross-functional teams</b>, ensuring projects meet <b>deadlines</b> and <b>objectives</b> through structured methodologies and continuous improvement practices.",
   },
   {
     id: "5",
-    Icon: BiSolidServer,
-    title: "Server Infrastructure",
+    Icon: AiFillDatabase,
+    title: "Backend Development",
     about:
-      "Managing and optimizing my <b>Homelab Server</b>. Currently using <b>Proxmox</b>, <b>TrueNAS</b>, <b>Kubernetes</b>, <b>Docker</b>, and <b>Cloudflare</b>.",
+      "Developing robust <b>server-side solutions</b> with <b>Node.js</b> and <b>Python</b>, ensuring efficient <b>data processing</b>, integration, and system reliability.",
   },
   {
     id: "6",
-    Icon: BsHddNetworkFill,
-    title: "Networking",
+    Icon: BsWindowFullscreen,
+    title: "Frontend Development",
     about:
-      "Gained proficiency in network protocols, configurations, and security by experimenting with my <b>Homelab Server</b>. Currently using <b>Ubiquiti</b> gear.",
+      "Building <b>user-friendly interfaces</b> with <b>HTML</b>, <b>Tailwind</b>, and <b>React</b>, translating design concepts into responsive and scalable applications.",
   },
   {
     id: "7",
+    Icon: AiFillCode,
+    title: "Algorithmic Problem Solving",
+    about:
+      "Strengthened skills in <b>data structures</b> and <b>algorithms</b> through platforms like LeetCode, applying structured approaches to optimize solutions for complex challenges.",
+  },
+  {
+    id: "8",
     Icon: BiSolidNetworkChart,
     title: "Artificial Intelligence",
     about:
-      "Currently learning AI. I've explored machine learning, data analysis, and neural networks.",
+      "Exploring <b>machine learning</b>, <b>data analysis</b>, and <b>neural networks</b>, with a focus on applying AI concepts to real-world scenarios.",
   },
 ];

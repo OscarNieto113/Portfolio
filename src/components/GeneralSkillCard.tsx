@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { GeneralSkill } from "../data/generalSkills";
+import type { GeneralSkill } from "../data/generalSkills";
 
 /**
  * Represents a component for displaying information about a general skill.
@@ -21,14 +21,18 @@ const GeneralSkill: FunctionComponent<{ service: GeneralSkill }> = ({
   }
 
   return (
-    <div className="flex items-center p-2 space-x-4 rounded-lg bg-lightPurple font-dina">
-      <Icon className="w-12 h-12 text-orange" />
-      <div className="">
-        <h6 className="font-bold text-newGray">{title}</h6>
-        <p className="text-newGray" dangerouslySetInnerHTML={createMarkup()} />
+    <div className="flex flex-col md:flex-row items-center md:items-center justify-center p-4 space-x-0 md:space-x-4 rounded-lg bg-lightPurple font-dina max-w-lg mx-auto hover:shadow-lg hover:scale-105 transition-all">
+      <div className="flex items-center justify-center w-20 h-20">
+        <Icon className="w-10 h-10 text-orange" />
+      </div>
+      <div className="text-center md:text-left mt-2 md:mt-0">
+        <h6 className="font-bold text-newGray mb-1">{title}</h6>
+        <p className="text-newGray text-sm" dangerouslySetInnerHTML={createMarkup()} />
       </div>
     </div>
   );
 };
 
 export default GeneralSkill;
+
+
