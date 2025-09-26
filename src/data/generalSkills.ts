@@ -14,9 +14,8 @@ export const generalSkills: GeneralSkill[] = [
   {
     id: "1",
     Icon: AiFillDatabase,
-    title: "Data Engineering",
-    about:
-      "Designing and maintaining <b>data pipelines</b> to ensure reliable <b>collection, transformation, and storage</b> of information. Experienced with <b>ETL processes</b>, <b>databases</b>, and <b>data modeling</b> to enable analytics and decision-making.",
+    title: "Data Analyst",
+    about: "Collecting, cleaning, and analyzing data to generate actionable insights. Skilled in <b>data visualization</b>, <b>databases</b>, and <b>data modeling</b> to support informed decision-making.",
   },
   {
     id: "2",

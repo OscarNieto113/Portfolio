@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AiOutlineFolder } from "react-icons/ai";
 import DownloadButton from "./DownloadButton";
 import PersoalInformation from "./PersonalInformation";
 import { AiFillLinkedin, AiFillGithub, AiFillFilePdf, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
@@ -31,6 +32,7 @@ const Sidebar = () => {
           <span className="text-orange">{"<"}Oscar{"/>"}</span> Nieto Espitia
         </strong>
       </h2>
+      <p>Data Analyst & IT Systems Specialist</p>
 
       {/* Resume Button */}
       <DownloadButton

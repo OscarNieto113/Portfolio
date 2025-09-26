@@ -5,7 +5,7 @@ import { generalSkills } from "../data/generalSkills";
 const About: NextPage = () => {
   const coreSkills = generalSkills.filter((skill) =>
     [
-      "Data Engineering",
+      "Data Analyst",
       "Infrastructure Engineering",
       "Network Engineering",
     ].includes(skill.title)
@@ -14,7 +14,7 @@ const About: NextPage = () => {
   const additionalSkills = generalSkills.filter(
     (skill) =>
       ![
-        "Data Engineering",
+        "Data Analyst",
         "Infrastructure Engineering",
         "Network Engineering",
       ].includes(skill.title)
@@ -32,7 +32,7 @@ const About: NextPage = () => {
           <span className="text-2xl font-bold text-orange">Hello,</span> I'm
           <strong> Oscar Nieto</strong>, a technology professional focused on{" "}
           <strong>
-            Data Engineering, Infrastructure Engineering and Network Engineering
+            Data Analyst, Infrastructure Engineering and Network Engineering
           </strong>
           .
         </p>
@@ -44,7 +44,7 @@ const About: NextPage = () => {
       </div>
 
       <div className="p-4 rounded-lg bg-newGray max-w-full mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
-        <h4 className="text-xl font-semibold tracking-wide">
+        <h4 className="text-xl font-semibold tracking-wide text-right text-orange">
           <strong>Core Expertise</strong>
         </h4>
         <div className="grid gap-6 my-3 md:grid-cols-2">
@@ -60,7 +60,7 @@ const About: NextPage = () => {
       </div>
 
       <div className="p-4 rounded-lg bg-newGray max-w-full mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
-        <h4 className="text-xl font-semibold tracking-wide">
+        <h4 className="text-xl font-semibold tracking-wide text-right text-orange">
           <strong>Additional Skills</strong>
         </h4>
         <div className="grid gap-6 my-3 md:grid-cols-2">

@@ -1,47 +1,45 @@
 import { ReactElement } from "react";
 
-/**
- * Represents a section component.
- *
- * @component
- *
- * @param {object} props - The component's props.
- * @param {string} props.title - The title of the section.
- * @param {string} props.subTitle - The subtitle of the section.
- * @param {string} props.description - The description of the section.
- * @param {string} props.date - The date associated with the section.
- * @param {string} props.iconPath - The path to the icon for the section.
- *
- * @returns {React.ReactElement} A React element representing the section.
- */
-type PropsType = {
-  title: string;
-  subTitle: string;
-  description: string;
+type ExperienceType = {
+  company: string;
+  role: string;
   date: string;
   iconPath: string;
+  bullets?: string[];
 };
 
-const Section = ({
-  title,
-  subTitle,
-  description,
-  date,
-  iconPath,
-}: PropsType): ReactElement => {
-  
+type PropsType = {
+  title: string;
+  experiences: ExperienceType[];
+};
+
+const Section = ({ title, experiences }: PropsType): ReactElement => {
   return (
-    <div className="flex flex-col md:flex-row md:justify-between">
-      <div>
-        <h2 className="my-3 text-2xl font-bold text-orange">{title}</h2>
-        <div className="flex items-center">
-          <div className="mr-2">
-            <img src={iconPath} alt="Icon" className="w-8 h-8" />
+    <div className="flex flex-col">
+      <h2 className="text-2xl font-bold text-orange">{title}</h2>
+
+      <div className="space-y-3">
+        {experiences.map((exp, index) => (
+          <div key={index} className="flex flex-col">
+            <div className="flex items-center space-x-2">
+              <img src={exp.iconPath} alt="Icon" className="w-10 h-10" />
+              <p className="text-base font-medium">
+                {exp.company} – {exp.role}{" "}
+                <span className="text-xs text-gray-500">({exp.date})</span>
+              </p>
+            </div>
+            
+            {exp.bullets && exp.bullets.length > 0 && (
+              <ul className="list-disc list-inside text-gray-700 ml-6 mt-1 space-y-0.5">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="text-xs">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          <h3 className="my-2 text-xl font-bold">{subTitle}</h3>
-          <div className="ml-4 text-sm text-gray-500">{date}</div>
-        </div>
-        <p>{description}</p>
+        ))}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ import { Company } from "../data/companies"; // Import the Company interface
  * @returns {React.ReactElement} A React element representing the company carousel.
  */
 interface Props {
-  companies: Company[]; // Change "skills" to "companies"
+  companies: Company[];
   options?: EmblaOptionsType;
   subtitle?: string;
 }
@@ -44,21 +44,31 @@ const CompanyCarrousel: React.FC<Props> = ({
   );
 
   return (
-    <div className="w-full px-5 py-3 mx-auto rounded-lg bg-newGray embla">
+    <div className="w-full px-5 py-3 mx-auto bg-newGray embla select-none">
       {subtitle && (
         <h2 className="my-3 text-2xl font-bold text-center">{subtitle}</h2>
       )}
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="flex space-x-10 embla__container">
+        <div className="flex embla__container">
           {companies.map((company) => (
-            <div key={company.id}>
-              <div className="w-16 h-16 p-3 text-4xl transition-transform transform bg-gray-400 rounded-full embla__slide__icon hover:scale-110">
+            <div
+              key={company.id}
+              className="flex flex-col items-center px-5 text-center embla__slide"
+            >
+              <div
+                className="w-16 h-16 p-3 transition-transform transform bg-gray-400 rounded-full embla__slide__icon hover:scale-110"
+                title={company.companyName}
+              >
                 <img
                   src={company.iconPath}
                   alt={company.companyName}
-                  className="w-full h-full"
+                  className="w-full h-full pointer-events-none"
                 />
               </div>
+
+              <span className="mt-2 text-xs font-medium text-gray-700 pointer-events-none">
+                {company.description}
+              </span>
             </div>
           ))}
         </div>
