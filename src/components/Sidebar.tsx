@@ -27,11 +27,11 @@ const Sidebar = () => {
       />
 
       {/* Name */}
-      <h2 className="text-3xl font-medium tracking-wider text-center font-dina">
+      <h1 className="text-3xl font-medium tracking-wider text-center font-dina">
         <strong>
-          <span className="text-orange">{"<"}Oscar{"/>"}</span> Nieto Espitia
+          Oscar Nieto Espitia
         </strong>
-      </h2>
+      </h1>
       <p>Data Analyst & IT Systems Specialist</p>
 
       {/* Resume Button */}
@@ -43,7 +43,7 @@ const Sidebar = () => {
 
       {/* Social Media */}
       <div className="flex justify-center gap-6 text-Purple">
-        <SocialMedia name="" link="https://www.linkedin.com/in/oscarnieto113" icon={AiFillLinkedin} />
+        <SocialMedia name="" link="https://linkedin.com/in/oscarnietoespitia" icon={AiFillLinkedin} />
         <SocialMedia name="" link="https://github.com/OscarNieto113" icon={AiFillGithub} />
         <SocialMedia name="" link="https://leetcode.com/OscarNieto113/" icon={SiLeetcode} />
       </div>
