@@ -22,13 +22,6 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
 
   const toggleDetail = () => setShowDetail(!showDetail);
 
-  const allSkills = new Set([
-    ...project.languagesAndTools,
-    ...project.librariesAndFrameworks,
-    ...project.databases,
-    ...project.others,
-  ]);
-
   return (
     <>
       <Card key={project.id} className="w-full max-w-[26rem] shadow-lg ">
@@ -50,7 +43,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
             {project.description}
           </p>
 
-          <CardTechTag techs={allSkills} />
+          <CardTechTag techs={project.allSkills} />
         </CardBody>
         <CardFooter className="flex pt-3">
           <div className="w-32 mx-5 mb-3 ml-auto">
@@ -70,7 +63,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
         <ProjectCardDetails
           project={project}
           toggleDetail={toggleDetail}
-          techs={allSkills}
+          techs={project.allSkills}
         />
       </Modal>
     </>
