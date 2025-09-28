@@ -37,7 +37,16 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
 
         <CardBody>
           <div className="flex items-center justify-between mx-3">
-            <h3 className="my-1 text-2xl font-bold ">{project.nameProject}</h3>
+            <div className="flex items-center gap-2">
+              {project.companyIcon && (
+                <img
+                  src={project.companyIcon}
+                  alt={`${project.nameProject} logo`}
+                  className="w-8 h-8 rounded-full object-contain"
+                />
+              )}
+              <h3 className="my-1 text-2xl font-bold">{project.nameProject}</h3>
+            </div>
           </div>
           <p className="mx-4 overflow-hidden text-ellipsis max-h-[4rem]">
             {project.description}
