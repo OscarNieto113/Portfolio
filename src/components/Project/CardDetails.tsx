@@ -31,7 +31,6 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
 
   return (
     <div className="absolute top-0 left-0 z-10 grid w-full h-full rounded-md bg-newGray text-purple md:grid-cols-2 gap-x-12 dark:text-newGray dark:bg-dark-100">
-      {/* 🔹 Imagen del proyecto */}
       <div className="flex flex-col items-center justify-center p-5 bg-newGray">
         <Image
           src={project.imgPath}
@@ -79,7 +78,16 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
           )}
         </div>
 
-        <h3 className="mb-3 font-medium text-center">{project.description}</h3>
+        <p className="mb-3 font-medium text-center">{project.description}</p>
+
+        <div className="mt-4 w-full">
+            <h4 className="text-lg font-semibold text-purple mb-2">
+              Role & Contributions
+            </h4>
+            <p className="text-sm leading-relaxed text-gray-800 dark:text-gray-300">
+              {project.rolAndContribution}
+            </p>
+          </div>
 
         <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
           <SkillsList
