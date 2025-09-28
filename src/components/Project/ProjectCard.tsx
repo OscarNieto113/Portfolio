@@ -36,24 +36,28 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
         </CardHeader>
 
         <CardBody>
-          <div className="flex items-center justify-between mx-3">
-            <div className="flex items-center gap-2">
-              {project.companyIcon && (
-                <img
-                  src={project.companyIcon}
-                  alt={`${project.nameProject} logo`}
-                  className="w-8 h-8 rounded-full object-contain"
-                />
-              )}
-              <h3 className="my-1 text-2xl font-bold">{project.nameProject}</h3>
-            </div>
-          </div>
-          <p className="mx-4 overflow-hidden text-ellipsis max-h-[4rem]">
-            {project.description}
-          </p>
+  <div className="mx-3 flex items-center justify-between">
+    <h3 className="my-1 text-2xl font-bold">{project.nameProject}</h3>
+    {project.developedAtIcon && (
+      <div className="flex items-center gap-2 ml-4">
+        <img
+          src={project.developedAtIcon}
+          alt={`${project.developedAt} logo`}
+          className="w-6 h-6 rounded-full object-contain"
+        />
+        <span className="text-xs text-gray-600 dark:text-gray-400">
+          Developed at <strong>{project.developedAt}</strong>
+        </span>
+      </div>
+    )}
+  </div>
 
-          <CardTechTag techs={project.allSkills} />
-        </CardBody>
+  <p className="mx-4 mt-2 overflow-hidden text-ellipsis max-h-[4rem]">
+    {project.description}
+  </p>
+
+  <CardTechTag techs={project.allSkills} />
+</CardBody>
         <CardFooter className="flex pt-3">
           <div className="w-32 mx-5 mb-3 ml-auto">
             <Button
