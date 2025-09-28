@@ -61,7 +61,7 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "Hello! Welcome to My Tech Journey Portfolio As a Computer Science student currently pursuing my studies at ITESM, I am thrilled to present this project to you. It's not just a website; it's a reflection of my lifelong fascination with technology and my journey of turning that curiosity into a career.",
-    urlDeploy: "https://oscarnietoespitia.tech",
+    urlDeploy: "https://oscarnietoespitia.xyz/",
     urlGithub: "https://github.com/OscarNieto113/Portfolio",
     allSkills: new Set([
       { id: "1", Icon: AiFillHtml5, name: "HTML" },
