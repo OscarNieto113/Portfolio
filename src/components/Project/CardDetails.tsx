@@ -42,12 +42,14 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
         />
 
         <div className="flex justify-center my-4 space-x-3">
-          <UrlButton
-            href={project.urlGithub}
-            label="Github"
-            ariaLabel={`GitHub link for ${project.nameProject}`}
-            icon={AiFillGithub}
-          />
+          {project.urlGithub && (
+            <UrlButton
+              href={project.urlGithub}
+              label="Github"
+              ariaLabel={`GitHub link for ${project.nameProject}`}
+              icon={AiFillGithub}
+            />
+          )}
           {project.urlDeploy && (
             <UrlButton
               href={project.urlDeploy}
@@ -81,13 +83,13 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
         <p className="mb-3 font-medium text-center">{project.description}</p>
 
         <div className="mt-4 w-full">
-            <h4 className="text-lg font-semibold text-purple mb-2">
-              Role & Contributions
-            </h4>
-            <p className="text-sm leading-relaxed text-gray-800 dark:text-gray-300">
-              {project.rolAndContribution}
-            </p>
-          </div>
+          <h4 className="text-lg font-semibold text-purple mb-2">
+            Role & Contributions
+          </h4>
+          <p className="text-sm leading-relaxed text-gray-800 dark:text-gray-300">
+            {project.rolAndContribution}
+          </p>
+        </div>
 
         <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
           <SkillsList

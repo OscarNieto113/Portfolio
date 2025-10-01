@@ -18,15 +18,18 @@ import {
 } from "react-icons/bi";
 import { BsFillBootstrapFill, BsGit } from "react-icons/bs";
 import {
+  SiHuawei,
   SiJupyter,
   SiKeras,
   SiKotlin,
+  SiLinux,
   SiProxmox,
   SiScikitlearn,
   SiTensorflow,
   SiTruenas,
   SiTypescript,
   SiVite,
+  SiVmware,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
@@ -48,12 +51,72 @@ export interface Project {
   urlDeploy?: string;
   developedAtIcon?: string;
   developedAt?: string;
-  urlGithub: string;
+  urlGithub?: string;
   allSkills: Set<Skill>;
   category: Category[];
 }
 
 export const projects: Project[] = [
+  {
+    id: generateUniqueId(),
+    nameProject: "NextCloud Implementation at AIFA",
+    imgPath: "/images/projects/NEXTCLOUD.png",
+    developedAtIcon: "/icons/aifa.ico",
+    developedAt: "AIFA",
+    description:
+      "Implemented and configured NextCloud at Felipe Ángeles International Airport to enhance secure collaboration and document management. The project addressed strict privacy requirements and introduced structured software practices.",
+    rolAndContribution:
+      "As IT System Analyst, I led the deployment and customization of NextCloud to create a private, secure cloud environment for sensitive data. I ensured real-time collaboration on office documents while safeguarding compliance with data privacy policies. Additionally, I drove the adoption of CMMI practices in the Configuration Management area, transmitting best practices to the team and fostering a systematic approach to software product management. This project highlighted my ability to blend technical expertise with process improvement in a mission-critical environment.",
+    urlDeploy: "",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "34", Icon: SiLinux, name: "Linux" },
+    ]),
+    category: [
+      "Infrastructure Engineering"
+    ],
+  },
+  {
+    id: generateUniqueId(),
+    nameProject: "AIFA Data Center Operations",
+    imgPath: "/images/projects/DATACENTER.jpg",
+    developedAtIcon: "/icons/aifa.ico",
+    developedAt: "AIFA",
+    description:
+      "Operational support for the Felipe Ángeles International Airport Data Center, ensuring stability and reliability of critical IT infrastructure in collaboration with Huawei.",
+    rolAndContribution:
+      "I was responsible for routine data center inspections, monitoring and ensuring proper functioning of critical systems. I provisioned virtual machines with additional resources based on usage patterns, optimized performance, and coordinated with Huawei engineers to resolve advanced infrastructure issues.",
+    urlDeploy: "",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "21", Icon: SiVmware, name: "VMware" },
+      { id: "26", Icon: BiLogoAws, name: "AWS" },
+      { id: "20", Icon: BsGit, name: "Git" },
+      { id: "31", Icon: SiHuawei, name: "Huawei Systems" },
+    ]),
+    category: ["Infrastructure Engineering"],
+  },
+  {
+    id: generateUniqueId(),
+    nameProject: "AIFA Website",
+    imgPath: "/images/projects/AIFA.png",
+    developedAtIcon: "/icons/aifa.ico",
+    developedAt: "AIFA",
+    description:
+      "The official website of the Felipe Ángeles International Airport (AIFA), designed to provide travelers with updated information and an accessible interface. Built with HTML, CSS, and JavaScript, the site reflects the airport's branding and ensures a smooth user experience.",
+    rolAndContribution:
+      "I collaborated with a teammate to develop and maintain the official AIFA website. My responsibilities included implementing branding updates requested by the design team, coding front-end features, and managing deployments in AWS to ensure reliability and availability.",
+    urlDeploy: "https://aifa.aero/",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "1", Icon: AiFillHtml5, name: "HTML" },
+      { id: "2", Icon: BiLogoCss3, name: "CSS" },
+      { id: "3", Icon: BiLogoJavascript, name: "Javascript" },
+      { id: "26", Icon: BiLogoAws, name: "AWS" },
+      { id: "20", Icon: BsGit, name: "Git" },
+    ]),
+    category: ["Frontend Development"],
+  },
   {
     id: generateUniqueId(),
     nameProject: "Portfolio",
@@ -62,7 +125,8 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "Hello! Welcome to My Tech Journey Portfolio As a Computer Science student currently pursuing my studies at ITESM, I am thrilled to present this project to you. It's not just a website; it's a reflection of my lifelong fascination with technology and my journey of turning that curiosity into a career.",
-    rolAndContribution: "I independently designed and developed the entire portfolio, handling both front-end and back-end implementation. This project reflects my technical expertise, creativity, and ability to build fully functional solutions from scratch.",
+    rolAndContribution:
+      "I independently designed and developed the entire portfolio, handling both front-end and back-end implementation. This project reflects my technical expertise, creativity, and ability to build fully functional solutions from scratch.",
     urlDeploy: "https://oscarnietoespitia.xyz/",
     urlGithub: "https://github.com/OscarNieto113/Portfolio",
     allSkills: new Set([
@@ -85,7 +149,8 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "Kiara Bienes Raices is an ambitious endeavor to empower a real estate consultancy in Querétaro. This project envisions a responsive web application that streamlines property searches, offering clients an efficient way to explore available properties for sale or rent. It simplifies transaction tracking, enhancing transparency and confidence, while also connecting seamlessly with Kiara Bienes Raices' social media presence. The ultimate objectives are to provide users with 99% property information availability and real-time process visibility, reinforcing trust and saving valuable time for clients in the real estate market.",
-    rolAndContribution: "Served as Architecture Owner, defining the system’s structure and integration strategies. Participate in the technical vision to ensure scalability, performance, and seamless integration with property management.",
+    rolAndContribution:
+      "Served as Architecture Owner, defining the system’s structure and integration strategies. Participate in the technical vision to ensure scalability, performance, and seamless integration with property management.",
     urlDeploy: "https://casaenqueretaro.com.mx",
     urlGithub: "https://github.com/Genesis-Solutions/Kiara-Bienes-Raices",
     allSkills: new Set([
@@ -113,7 +178,8 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "Gomez Morin is a transformative project focused on digitizing and optimizing the space request process at the Centro Educativo y Cultural Gomez Morin. By streamlining this procedure, the project aims to significantly reduce processing time, cut down on paperwork, and minimize physical customer interactions. Its ultimate goal is to condense a 4-hour process into just 1 hour within 15 weeks, enhancing efficiency, increasing successful requests, and improving customer satisfaction. This innovative system introduces modules for request submission, user profile management, access to vital information, communication with clients, role management, and responsiveness across devices while seamlessly coexisting with existing systems.",
-    rolAndContribution: "Acted as both Product Owner and Developer, bridging communication between stakeholders and the development team. Defined user stories, prioritized features, and actively contributed to coding, ensuring the system reduced processing time from 4 hours to 1.",
+    rolAndContribution:
+      "Acted as both Product Owner and Developer, bridging communication between stakeholders and the development team. Defined user stories, prioritized features, and actively contributed to coding, ensuring the system reduced processing time from 4 hours to 1.",
     urlDeploy: "https://eventos-ceceq.com/",
     urlGithub: "https://github.com/Genesis-Solutions/Gomez-Morin-Frontend",
     allSkills: new Set([
@@ -142,7 +208,8 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "In this Kaggle competition, we harnessed machine learning to create a precise time-series forecasting model for store sales using data from a major Ecuadorian grocery retailer, Corporación Favorita. Our goal was to optimize inventory management by predicting unit sales, balancing the delicate act between overstocking and product shortages. With a top 100 submission, we developed a linear regression model, employed metrics like RMSLE, MSE, and MAE for evaluation, and even crafted a user-friendly app with Flask, React, and Tailwind CSS to make future sales predictions accessible. This project showcases our proficiency in data analysis, machine learning, and application development, all geared toward solving real-world challenges in retail forecasting.",
-    rolAndContribution: "Focused on model training and application development. Trained a time-series forecasting model using Python and Scikit-Learn, and built the accompanying web application with Flask and React to make predictions accessible for end-users.",
+    rolAndContribution:
+      "Focused on model training and application development. Trained a time-series forecasting model using Python and Scikit-Learn, and built the accompanying web application with Flask and React to make predictions accessible for end-users.",
     urlDeploy: "",
     urlGithub: "https://github.com/FlavioRr/StoreSalesForecastingTC3006C",
     allSkills: new Set([
@@ -174,7 +241,8 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "Genesis is a dynamic software department committed to achieving high competency levels, delivering quality software solutions, and advancing maturity in CMMI. Our overarching objective is to consolidate the Genesis department within a focused 15-week timeline, encompassing three key goals: reaching CMMI maturity level 2.7, fostering a Jedi-level of expertise among all team members, and consistently delivering top-notch software solutions to our esteemed Training Partners, Kiara and Gómez Morín. With a robust structure, rotating Program Managers, and agile teams managing projects like Caelum and Terra, Genesis is dedicated to continuous improvement, skill development, and innovation in software development and project management.",
-    rolAndContribution: "Served as Project Manager, coordinating agile teams across multiple projects. Oversaw timelines, resource allocation, and delivery, ensuring alignment with CMMI maturity goals while fostering team collaboration and professional growth.",
+    rolAndContribution:
+      "Served as Project Manager, coordinating agile teams across multiple projects. Oversaw timelines, resource allocation, and delivery, ensuring alignment with CMMI maturity goals while fostering team collaboration and professional growth.",
     urlDeploy: "",
     urlGithub:
       "https://andrewisabeast.notion.site/G-nesis-e66594d87d41464dacb036ab7322e908?pvs=4",
@@ -189,7 +257,8 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "Atemporal addresses the challenges faced by emerging artists who lack opportunities and financial backing. We're developing a mobile app for event promotion, management, and optimization, empowering artists to grow professionally. The app's scope includes ticket scanning, data analysis, resource management simulation, user roles, customer support, event sharing, user feedback, and cross-platform login. Atemporal's goal is to support artists in their journey, providing them with the tools needed to succeed in the industry.",
-    rolAndContribution: "Worked as Developer, contributing to the mobile application with Kotlin and Firebase. Focused on implementing event management features, ticket scanning, and user roles to support emerging artists in promoting and managing events.",
+    rolAndContribution:
+      "Worked as Developer, contributing to the mobile application with Kotlin and Firebase. Focused on implementing event management features, ticket scanning, and user roles to support emerging artists in promoting and managing events.",
     urlDeploy: "",
     urlGithub: "https://github.com/Mike5801/AppAtemporal",
     allSkills: new Set([
@@ -207,7 +276,8 @@ export const projects: Project[] = [
     developedAt: "ITESM",
     description:
       "We specialize in developing web solutions to streamline our client's administrative processes, making them more efficient and organized. Natgas, a Mexican Natural Gas Vehicle (NGV) company, faces challenges in managing internal projects and communication. Our project, Data Logic Code, aims to replace HR's communication tool, improve HR communication with other departments, automate vacation management, centralize NG Blocks permissions, enhance monthly report data entry, simplify anniversary and birthday reminders, and provide clear visualization of Natgas objectives. This integrated digital solution aims to improve communication, data management, and overall employee engagement at Natgas.",
-    rolAndContribution: "Team of two developed the entire solution, covering both front-end and back-end. Automated HR workflows, built permission management modules, and centralized data reporting.",
+    rolAndContribution:
+      "Team of two developed the entire solution, covering both front-end and back-end. Automated HR workflows, built permission management modules, and centralized data reporting.",
     urlDeploy: "https://dlc-itesm.uc.r.appspot.com/users/login",
     urlGithub: "https://github.com/OscarNieto113/DLC",
     allSkills: new Set([
