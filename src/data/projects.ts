@@ -23,7 +23,10 @@ import {
   SiKeras,
   SiKotlin,
   SiLinux,
+  SiNumpy,
+  SiPandas,
   SiProxmox,
+  SiPython,
   SiScikitlearn,
   SiTensorflow,
   SiTruenas,
@@ -59,6 +62,27 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: generateUniqueId(),
+    nameProject: "Advanced Data Analytics for Aircraft Stability Prediction",
+    imgPath: "/images/projects/GE.png",
+    developedAtIcon: "/icons/itesm.ico",
+    developedAt: "ITESM",
+    description:
+      "Developed an advanced data science project to predict aircraft stability during flight. Achieved high accuracy in identifying the 'Stable Cruise' phase through machine learning, enhancing safety insights and operational efficiency.",
+    rolAndContribution:
+      "As Data Analyst, I led the design and optimization of machine learning models (XGBoost and Neural Networks), achieving 97% accuracy in stability prediction. I tackled data imbalance challenges using undersampling, boosting model efficiency. I also documented the workflow following CRISP-DM methodology, ensuring structured, reproducible processes. Findings were presented to stakeholders in a clear, actionable way, demonstrating my ability to transform complex analytics into business value.",
+    urlDeploy: "",
+    urlGithub: "https://github.com/CristianA01702752/GE-Data-Proyect-Electric-Cherry",
+    allSkills: new Set([
+      { id: "40", Icon: SiPython, name: "Python" },
+      { id: "41", Icon: SiScikitlearn, name: "Scikit-learn" },
+      { id: "42", Icon: SiTensorflow, name: "TensorFlow" },
+      { id: "44", Icon: SiPandas, name: "Pandas" },
+      { id: "45", Icon: SiNumpy, name: "NumPy" },
+    ]),
+    category: ["Artificial Intelligence", "Data Analyst"],
+  },
+  {
+    id: generateUniqueId(),
     nameProject: "NextCloud Implementation at AIFA",
     imgPath: "/images/projects/NEXTCLOUD.png",
     developedAtIcon: "/icons/aifa.ico",
@@ -69,12 +93,8 @@ export const projects: Project[] = [
       "As IT System Analyst, I led the deployment and customization of NextCloud to create a private, secure cloud environment for sensitive data. I ensured real-time collaboration on office documents while safeguarding compliance with data privacy policies. Additionally, I drove the adoption of CMMI practices in the Configuration Management area, transmitting best practices to the team and fostering a systematic approach to software product management. This project highlighted my ability to blend technical expertise with process improvement in a mission-critical environment.",
     urlDeploy: "",
     urlGithub: "",
-    allSkills: new Set([
-      { id: "34", Icon: SiLinux, name: "Linux" },
-    ]),
-    category: [
-      "Infrastructure Engineering"
-    ],
+    allSkills: new Set([{ id: "34", Icon: SiLinux, name: "Linux" }]),
+    category: ["Infrastructure Engineering"],
   },
   {
     id: generateUniqueId(),
