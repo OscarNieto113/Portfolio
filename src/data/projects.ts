@@ -24,8 +24,10 @@ import {
   SiKeras,
   SiKotlin,
   SiLinux,
+  SiMicrosoftsqlserver,
   SiNumpy,
   SiPandas,
+  SiPowerbi,
   SiProxmox,
   SiPython,
   SiSap,
@@ -65,6 +67,28 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: generateUniqueId(),
+    nameProject: "Manufacturing Analytics Dashboard",
+    imgPath: "/images/projects/alteacasting.jpg",
+    developedAtIcon: "/icons/alteacasting.ico",
+    developedAt: "Altea Casting",
+    description:
+      "Designed and implemented a Power BI analytics solution to centralize production, quality, and material consumption data. The project provided real-time visibility of KPIs across production stages, enhancing operational control and decision-making.",
+    rolAndContribution:
+      "As a Data Analyst Consultant, I consolidated fragmented Excel records into a scalable Power BI data model integrating production output, rejected parts, and raw material usage. I built interactive dashboards that improved traceability and revealed actionable insights on efficiency and quality. Additionally, I conducted workshops with production teams to align KPIs with business goals and trained end users for seamless adoption. This project demonstrated my ability to translate manufacturing operations into clear, data-driven insights that supported continuous improvement.",
+    urlDeploy: "",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "70", Icon: SiPowerbi, name: "Power BI" },
+      { id: "71", Icon: SiMicrosoftsqlserver, name: "SQL Server" },
+      { id: "72", Icon: SiPandas, name: "Pandas" },
+    ]),
+    category: [
+      "Data Analyst"
+    ],
+  },
+
   {
     id: generateUniqueId(),
     nameProject: "Server Health & License Optimization Dashboard",
