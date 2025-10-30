@@ -19,6 +19,8 @@ import {
 import { BsFillBootstrapFill, BsGit } from "react-icons/bs";
 import {
   SiApachehadoop,
+  SiDocker,
+  SiHomeassistant,
   SiHuawei,
   SiJupyter,
   SiKeras,
@@ -27,6 +29,8 @@ import {
   SiMicrosoftsqlserver,
   SiNumpy,
   SiPandas,
+  SiPihole,
+  SiPortainer,
   SiPowerbi,
   SiProxmox,
   SiPython,
@@ -69,6 +73,34 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: generateUniqueId(),
+    nameProject: "Home Server & Virtualized Infrastructure Lab",
+    imgPath: "/images/projects/homelab.webp",
+    developedAtIcon: "/icons/favicon.ico",
+    developedAt: "Personal Project",
+    description:
+      "Designed and deployed a fully virtualized home infrastructure environment leveraging Proxmox, TrueNAS, and Ubiquiti equipment. The system integrates network segmentation, application hosting, and intelligent traffic management for data analytics, media, and IoT workloads.",
+    rolAndContribution:
+      "I architected a complete server and network ecosystem to simulate enterprise-grade operations at home. Using Proxmox, I virtualized multiple applications through Portainer, including storage (TrueNAS), media servers, and analytics tools. I implemented VLANs and firewall rules to isolate IoT, Home, and Guest networks, enhancing security and performance. Additionally, I deployed Pi-hole for DNS filtering, automated NVR monitoring, and optimized bandwidth with Ubiquiti devices. This environment serves as a continuous learning lab for system administration, DevOps, and network optimization.",
+    urlDeploy: "",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "80", Icon: SiProxmox, name: "Proxmox" },
+      { id: "81", Icon: SiTruenas, name: "TrueNAS" },
+      { id: "82", Icon: SiUbiquiti, name: "Ubiquiti" },
+      { id: "83", Icon: SiDocker, name: "Docker" },
+      { id: "84", Icon: SiPortainer, name: "Portainer" },
+      { id: "85", Icon: SiLinux, name: "Linux" },
+      { id: "86", Icon: SiPihole, name: "Pi-hole" },
+      { id: "88", Icon: SiHomeassistant, name: "Home Automation" },
+    ]),
+    category: [
+      "Network Engineering",
+      "Infrastructure Engineering",
+    ],
+  },
+
+  {
+    id: generateUniqueId(),
     nameProject: "Manufacturing Analytics Dashboard",
     imgPath: "/images/projects/alteacasting.jpg",
     developedAtIcon: "/icons/alteacasting.ico",
@@ -84,9 +116,7 @@ export const projects: Project[] = [
       { id: "71", Icon: SiMicrosoftsqlserver, name: "SQL Server" },
       { id: "72", Icon: SiPandas, name: "Pandas" },
     ]),
-    category: [
-      "Data Analyst"
-    ],
+    category: ["Data Analyst"],
   },
 
   {
