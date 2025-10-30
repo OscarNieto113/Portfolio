@@ -18,6 +18,7 @@ import {
 } from "react-icons/bi";
 import { BsFillBootstrapFill, BsGit } from "react-icons/bs";
 import {
+  SiApachehadoop,
   SiHuawei,
   SiJupyter,
   SiKeras,
@@ -27,7 +28,11 @@ import {
   SiPandas,
   SiProxmox,
   SiPython,
+  SiSap,
   SiScikitlearn,
+  SiSnowflake,
+  SiSqlite,
+  SiTableau,
   SiTensorflow,
   SiTruenas,
   SiTypescript,
@@ -62,6 +67,35 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: generateUniqueId(),
+    nameProject: "Multi-Platform Server Performance Optimization",
+    imgPath: "/images/projects/igeckoo1.png",
+    developedAtIcon: "/icons/igeckoo.ico",
+    developedAt: "iGeckoo (Client: Kellanova)",
+    description:
+      "Analyzed and optimized performance across more than 50 enterprise servers for Kellanova, identifying inefficiencies across SAP BODS, SQL Server, Hadoop, Tableau, Alation, Snowflake, and memSQL platforms. Achieved substantial cost reductions through data-driven infrastructure optimization.",
+    rolAndContribution:
+      "As Data Analyst, I led cross-platform performance monitoring, collecting and analyzing CPU, RAM, and SWAP usage data to detect inefficiencies and overprovisioned systems. I automated monthly reporting pipelines and presented insights directly to platform engineers, enabling informed infrastructure decisions. My recommendations resulted in $500K annual savings by optimizing resource allocation and consolidating underutilized systems. Additionally, I translated complex technical metrics into actionable insights for non-technical stakeholders, ensuring alignment between technical improvements and business goals.",
+    urlDeploy: "",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "50", Icon: SiPython, name: "Python" },
+      { id: "51", Icon: SiSqlite, name: "SQL" },
+      { id: "52", Icon: SiSnowflake, name: "Snowflake" },
+      { id: "53", Icon: SiTableau, name: "Tableau" },
+      { id: "54", Icon: SiApachehadoop, name: "Hadoop" },
+      { id: "55", Icon: SiSap, name: "SAP BODS" },
+      { id: "56", Icon: SiPandas, name: "Pandas" },
+      { id: "57", Icon: SiNumpy, name: "NumPy" },
+    ]),
+    category: [
+      "Data Analytics",
+      "Performance Optimization",
+      "Cloud Infrastructure",
+    ],
+  },
+
+  {
+    id: generateUniqueId(),
     nameProject: "Advanced Data Analytics for Aircraft Stability Prediction",
     imgPath: "/images/projects/GE.png",
     developedAtIcon: "/icons/itesm.ico",
@@ -71,7 +105,8 @@ export const projects: Project[] = [
     rolAndContribution:
       "As Data Analyst, I led the design and optimization of machine learning models (XGBoost and Neural Networks), achieving 97% accuracy in stability prediction. I tackled data imbalance challenges using undersampling, boosting model efficiency. I also documented the workflow following CRISP-DM methodology, ensuring structured, reproducible processes. Findings were presented to stakeholders in a clear, actionable way, demonstrating my ability to transform complex analytics into business value.",
     urlDeploy: "",
-    urlGithub: "https://github.com/CristianA01702752/GE-Data-Proyect-Electric-Cherry",
+    urlGithub:
+      "https://github.com/CristianA01702752/GE-Data-Proyect-Electric-Cherry",
     allSkills: new Set([
       { id: "40", Icon: SiPython, name: "Python" },
       { id: "41", Icon: SiScikitlearn, name: "Scikit-learn" },
