@@ -67,6 +67,29 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: generateUniqueId(),
+    nameProject: "Server Health & License Optimization Dashboard",
+    imgPath: "/images/projects/igeckoo2.png",
+    developedAtIcon: "/icons/igeckoo.ico",
+    developedAt: "iGeckoo (Client: Kellanova)",
+    description:
+      "Developed an interactive dashboard to monitor performance and license utilization across over 50 servers, integrating platforms such as SAP BODS, SQL Server, Hadoop, Tableau, and Snowflake. The tool automated health tracking and reduced manual reporting efforts.",
+    rolAndContribution:
+      "As Data Analyst, I designed and implemented a Power Bi dashboard that visualized CPU, RAM, and SWAP usage through real-time indicators, enabling engineers to identify system issues instantly. I integrated license utilization metrics to detect inactive dashboards and optimize cost efficiency. Additionally, I automated monthly data updates and reports, streamlining operational processes and allowing the engineering team to focus on high-impact performance analysis. This project demonstrated my ability to transform raw infrastructure data into actionable, business-oriented insights.",
+    urlDeploy: "",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "60", Icon: SiTableau, name: "Tableau" },
+      { id: "61", Icon: SiPython, name: "Python" },
+      { id: "62", Icon: SiSnowflake, name: "Snowflake" },
+      { id: "63", Icon: SiApachehadoop, name: "Hadoop" },
+      { id: "64", Icon: SiSap, name: "SAP BODS" },
+      { id: "65", Icon: SiPandas, name: "Pandas" },
+      { id: "66", Icon: SiNumpy, name: "NumPy" },
+    ]),
+    category: ["Data Analyst", "Project Management"],
+  },
+  {
+    id: generateUniqueId(),
     nameProject: "Multi-Platform Server Performance Optimization",
     imgPath: "/images/projects/igeckoo1.png",
     developedAtIcon: "/icons/igeckoo.ico",
@@ -87,11 +110,7 @@ export const projects: Project[] = [
       { id: "56", Icon: SiPandas, name: "Pandas" },
       { id: "57", Icon: SiNumpy, name: "NumPy" },
     ]),
-    category: [
-      "Data Analytics",
-      "Performance Optimization",
-      "Cloud Infrastructure",
-    ],
+    category: ["Data Analyst", "Project Management"],
   },
 
   {
