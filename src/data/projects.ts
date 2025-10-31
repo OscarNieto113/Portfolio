@@ -28,6 +28,7 @@ import {
   SiLinux,
   SiMicrosoftsqlserver,
   SiNumpy,
+  SiNvidia,
   SiPandas,
   SiPihole,
   SiPortainer,
@@ -42,6 +43,7 @@ import {
   SiTensorflow,
   SiTruenas,
   SiTypescript,
+  SiUptimekuma,
   SiVite,
   SiVmware,
 } from "react-icons/si";
@@ -73,6 +75,29 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: generateUniqueId(),
+    nameProject:
+      "High-Performance Virtual Server Rental for Engineering Simulations",
+    imgPath: "/images/projects/seismicps.png",
+    developedAtIcon: "/icons/seismicps.ico",
+    developedAt: "SeismicPS",
+    description:
+      "Provided a high-performance virtual machine to SeismicPS for advanced bridge simulation workloads. The environment offered GPU acceleration, ECC memory, and enterprise-grade networking to support compute-intensive engineering processes used by an international client from Japan.",
+    rolAndContribution:
+      "I designed, configured, and maintained a virtualized server environment leveraging Proxmox and dedicated hardware (Ryzen 5 2600, 64 GB ECC RAM, RTX 4060 GPU). The virtual machine was tailored to meet SeismicPS requirements for seismic bridge simulations, ensuring reliable performance and network stability. I implemented daily snapshots, weekly off-site backups, and monitoring systems for uptime assurance. Additionally, I handled client communication, contract management, and technical support throughout the rental period — achieving full operational continuity despite power outages and dynamic resource adjustments.",
+    urlDeploy: "",
+    urlGithub: "",
+    allSkills: new Set([
+      { id: "90", Icon: SiProxmox, name: "Proxmox" },
+      { id: "91", Icon: SiNvidia, name: "NVIDIA" },
+      { id: "92", Icon: SiLinux, name: "Linux Server Management" },
+      { id: "93", Icon: SiVmware, name: "Virtualization" },
+      { id: "94", Icon: SiUptimekuma, name: "Monitoring" },
+    ]),
+    category: ["Network Engineering", "Infrastructure Engineering"],
+  },
+
+  {
+    id: generateUniqueId(),
     nameProject: "Home Server & Virtualized Infrastructure Lab",
     imgPath: "/images/projects/homelab.webp",
     developedAtIcon: "/icons/favicon.ico",
@@ -93,10 +118,7 @@ export const projects: Project[] = [
       { id: "86", Icon: SiPihole, name: "Pi-hole" },
       { id: "88", Icon: SiHomeassistant, name: "Home Automation" },
     ]),
-    category: [
-      "Network Engineering",
-      "Infrastructure Engineering",
-    ],
+    category: ["Network Engineering", "Infrastructure Engineering"],
   },
 
   {
